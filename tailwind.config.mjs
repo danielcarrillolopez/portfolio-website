@@ -1,0 +1,27 @@
+/** @type {import('tailwindcss').Config} */
+const config = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#0A2463',
+          light: '#1e3a8a',
+          dark: '#030712',
+        },
+        secondary: {
+          DEFAULT: '#00B4D8',
+          light: '#38bdf8',
+          dark: '#0284c7',
+        },
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;

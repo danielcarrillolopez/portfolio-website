@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function About() {
   return (
     <main className="min-h-screen bg-white py-12">
@@ -6,10 +8,13 @@ export default function About() {
         
         {/* Profile Section */}
         <div className="flex flex-col md:flex-row gap-8 mb-12">
-          <div className="md:w-1/3">
-            <div className="w-64 h-64 bg-gray-200 rounded-lg mx-auto flex items-center justify-center">
-              <p className="text-gray-500">Your Photo</p>
-            </div>
+          <div className="relative w-64 h-64 mx-auto">
+            <Image
+              src="/images/profile/profile.jpg"
+              alt="Your Name"
+              fill
+              className="object-cover rounded-lg"
+            />
           </div>
           
           <div className="md:w-2/3">

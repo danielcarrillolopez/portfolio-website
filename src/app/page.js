@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
@@ -19,14 +21,14 @@ export default function Home() {
             <a 
               href="https://github.com/yourusername" 
               target="_blank"
-              className="px-6 py-3 bg-gray-900 text-white rounded-lg hover:bg-gray-700 transition"
+              className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-light transition"
             >
               GitHub
             </a>
             <a 
               href="https://linkedin.com/in/yourprofile" 
               target="_blank"
-              className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+              className="px-6 py-3 bg-secondary text-white rounded-lg hover:bg-secondary-light transition"
             >
               LinkedIn
             </a>
@@ -40,8 +42,13 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {/* Project Card 1 */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-            <div className="h-48 bg-gray-200 flex items-center justify-center">
-              <p className="text-gray-500">Project Image</p>
+            <div className="relative h-48">
+              <Image
+                src="/images/projects/project1.jpg"
+                alt="Project Name 1"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">Project Name 1</h3>
