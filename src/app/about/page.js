@@ -8,13 +8,15 @@ export default function About() {
         
         {/* Profile Section */}
         <div className="flex flex-col md:flex-row gap-8 mb-12">
-          <div className="relative w-64 h-64 mx-auto">
-            <Image
-              src="/images/profile/profile.jpg"
-              alt="Your Name"
-              fill
-              className="object-cover rounded-lg"
-            />
+          <div className="md:w-1/3">
+            <div className="relative w-64 h-64 mx-auto">
+              <Image
+                src="/images/profile/profile.jpg"
+                alt="Your Name"
+                fill
+                className="object-cover rounded-lg"
+              />
+            </div>
           </div>
           
           <div className="md:w-2/3">

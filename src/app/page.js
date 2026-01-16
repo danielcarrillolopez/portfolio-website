@@ -68,8 +68,13 @@ export default function Home() {
 
           {/* Project Card 2 */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-            <div className="h-48 bg-gray-200 flex items-center justify-center">
-              <p className="text-gray-500">Project Image</p>
+            <div className="relative h-48">
+              <Image
+                src="/images/projects/project2.jpg"
+                alt="Project Name 2"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">Project Name 2</h3>
@@ -89,8 +94,13 @@ export default function Home() {
 
           {/* Project Card 3 */}
           <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-            <div className="h-48 bg-gray-200 flex items-center justify-center">
-              <p className="text-gray-500">Project Image</p>
+            <div className="relative h-48">
+              <Image
+                src="/images/projects/project3.jpg"
+                alt="Project Name 3"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="p-6">
               <h3 className="text-xl font-bold mb-2">Project Name 3</h3>
