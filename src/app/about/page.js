@@ -1,10 +1,11 @@
 import Image from 'next/image';
+import { siteConfig } from '@/config/siteConfig';
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-white py-12">
+    <main className="min-h-screen bg-background py-12">
       <div className="container mx-auto px-4 max-w-4xl">
-        <h1 className="text-4xl font-bold mb-8">About Me</h1>
+        <h1 className="text-4xl font-bold mb-8 text-foreground dark:text-foreground-dark">About Me</h1>
         
         {/* Profile Section */}
         <div className="flex flex-col md:flex-row gap-8 mb-12">
@@ -12,7 +13,7 @@ export default function About() {
             <div className="relative w-64 h-64 mx-auto">
               <Image
                 src="/images/profile/profile.jpg"
-                alt="Your Name"
+                alt={siteConfig.author.name}
                 fill
                 className="object-cover rounded-lg"
               />
@@ -20,32 +21,27 @@ export default function About() {
           </div>
           
           <div className="md:w-2/3">
-            <h2 className="text-2xl font-bold mb-4">Engineering Solutions, Empowering Lives</h2>
-            <p className="text-gray-700 mb-4">
-              I'm a biomedical and robotics engineering student driven by a single question: 
-              How can we use technology to genuinely improve people's lives?
+            <h2 className="text-2xl font-bold mb-4 text-foreground dark:text-foreground-dark">{siteConfig.author.bioHeadline}</h2>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              [YOUR PERSONAL BIOGRAPHY - PARAGRAPH 1]
             </p>
-            <p className="text-gray-700 mb-4">
-              My answer lies at the intersection of mechanical design, electronics, and 
-              intelligent control systems—specifically in the field of assistive devices 
-              and robotic prosthetics.
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              [YOUR PERSONAL BIOGRAPHY - PARAGRAPH 2]
             </p>
-            <p className="text-gray-700">
-              Through hands-on projects and STEAM outreach to 500+ K-12 students, I'm 
-              building both technical expertise and the communication skills needed to 
-              make advanced medical technology accessible to everyone who needs it.
+            <p className="text-gray-700 dark:text-gray-300">
+              [YOUR PERSONAL BIOGRAPHY - PARAGRAPH 3]
             </p>
           </div>
         </div>
 
         {/* Skills Section */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6">Technical Skills</h2>
+          <h2 className="text-2xl font-bold mb-6 text-foreground dark:text-foreground-dark">Technical Skills</h2>
           
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-lg font-semibold mb-3">CAD & Design</h3>
-              <ul className="space-y-2 text-gray-700">
+              <h3 className="text-lg font-semibold mb-3 text-foreground dark:text-foreground-dark">CAD & Design</h3>
+              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• SolidWorks</li>
                 <li>• Fusion 360</li>
                 <li>• Parametric modeling</li>
@@ -54,8 +50,8 @@ export default function About() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-3">Programming</h3>
-              <ul className="space-y-2 text-gray-700">
+              <h3 className="text-lg font-semibold mb-3 text-foreground dark:text-foreground-dark">Programming</h3>
+              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• Python</li>
                 <li>• C/C++</li>
                 <li>• Arduino</li>
@@ -64,8 +60,8 @@ export default function About() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-3">Electronics</h3>
-              <ul className="space-y-2 text-gray-700">
+              <h3 className="text-lg font-semibold mb-3 text-foreground dark:text-foreground-dark">Electronics</h3>
+              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• Circuit design</li>
                 <li>• PCB layout</li>
                 <li>• Sensor integration</li>
@@ -74,8 +70,8 @@ export default function About() {
             </div>
 
             <div>
-              <h3 className="text-lg font-semibold mb-3">Fabrication</h3>
-              <ul className="space-y-2 text-gray-700">
+              <h3 className="text-lg font-semibold mb-3 text-foreground dark:text-foreground-dark">Fabrication</h3>
+              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                 <li>• 3D printing (FDM/SLA)</li>
                 <li>• CNC machining</li>
                 <li>• Laser cutting</li>
@@ -86,20 +82,20 @@ export default function About() {
         </div>
 
         {/* Philosophy Section */}
-        <div className="bg-gray-50 rounded-lg p-8">
-          <h2 className="text-2xl font-bold mb-4">My Engineering Philosophy</h2>
-          <p className="text-gray-700 mb-4">
+        <div className="bg-gray-50 dark:bg-background-dark rounded-lg p-8">
+          <h2 className="text-2xl font-bold mb-4 text-foreground dark:text-foreground-dark">My Engineering Philosophy</h2>
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             I believe that engineering exists to reduce human suffering and expand human capability.
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             Every project I undertake must:
           </p>
-          <ul className="space-y-2 text-gray-700 mb-4">
+          <ul className="space-y-2 text-gray-700 dark:text-gray-300 mb-4">
             <li>→ Function reliably in imperfect conditions (not just the lab)</li>
             <li>→ Be accessible to users beyond the affluent few</li>
             <li>→ Respect user autonomy and dignity in its design</li>
           </ul>
-          <p className="text-gray-700">
+          <p className="text-gray-700 dark:text-gray-300">
             I measure success by whether someone's life genuinely improved, not whether 
             the technology is impressive. The best designs disappear into intuitive use.
           </p>

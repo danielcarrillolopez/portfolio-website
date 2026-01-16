@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { projects } from '@/data/projects';
 import { notFound } from 'next/navigation';
 
-export default function ProjectDetail({ params }) {
+export default async function ProjectDetail({ params }) {
   // Find the project by slug
   const project = projects.find(p => p.slug === params.slug);
   
@@ -13,18 +13,18 @@ export default function ProjectDetail({ params }) {
   }
 
   return (
-    <main className="min-h-screen bg-white py-12">
+    <main className="min-h-screen bg-background dark:bg-background-dark py-12">
       <div className="container mx-auto px-4 max-w-4xl">
         <Link 
           href="/projects" 
-          className="inline-flex items-center text-primary hover:text-primary-light mb-8"
+          className="inline-flex items-center text-primary dark:text-primary-dark hover:text-primary-light dark:hover:text-primary-dark-light mb-8"
         >
           ← Back to Projects
         </Link>
 
-        <h1 className="text-4xl font-bold mb-4">{project.title}</h1>
+        <h1 className="text-4xl font-bold mb-4 text-foreground dark:text-foreground-dark">{project.title}</h1>
         
-        <div className="flex gap-4 mb-8 text-gray-600">
+        <div className="flex gap-4 mb-8 text-gray-600 dark:text-gray-300">
           <span>📅 {project.date}</span>
           <span>⏱️ {project.duration}</span>
           <span>💰 {project.cost}</span>
@@ -34,7 +34,7 @@ export default function ProjectDetail({ params }) {
           {project.tags.map((tag, index) => (
             <span 
               key={index}
-              className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium"
+              className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm font-medium"
             >
               {tag}
             </span>
@@ -50,8 +50,8 @@ export default function ProjectDetail({ params }) {
           />
         </div>
 
-        <div className="prose prose-lg max-w-none">
-          <h2>The Problem</h2>
+        <div className="prose prose-lg max-w-none text-foreground dark:text-foreground-dark">
+          <h2 className="text-foreground dark:text-foreground-dark">The Problem</h2>
           <p>{project.problem}</p>
 
           <h2>The Approach</h2>
@@ -79,12 +79,12 @@ export default function ProjectDetail({ params }) {
         </div>
 
         {project.github && (
-          <div className="mt-12 p-6 bg-gray-50 rounded-lg">
-            <h3 className="text-xl font-bold mb-4">Project Files</h3>
+          <div className="mt-12 p-6 bg-gray-50 dark:bg-background-dark rounded-lg">
+            <h3 className="text-xl font-bold mb-4 text-foreground dark:text-foreground-dark">Project Files</h3>
             <a 
               href={project.github} 
               target="_blank"
-              className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-light transition inline-block"
+              className="px-6 py-3 bg-primary dark:bg-primary-dark text-white rounded-lg hover:bg-primary-light dark:hover:bg-primary-dark-light transition inline-block"
             >
               View on GitHub
             </a>

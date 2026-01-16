@@ -1,34 +1,39 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import { siteConfig } from '@/config/siteConfig';
+import { projects } from '@/data/projects';
 
 export default function Home() {
+  const featuredProjects = projects.filter(p => siteConfig.featuredProjects.includes(p.slug));
+
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <main className="min-h-screen bg-background dark:bg-background-dark">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl font-bold text-gray-900 mb-4">
-            Your Name
+          <h1 className="text-5xl font-bold text-foreground dark:text-foreground-dark mb-4">
+            {siteConfig.author.name}
           </h1>
-          <p className="text-2xl text-gray-600 mb-6">
-            Biomedical & Robotics Engineering Student
+          <p className="text-2xl text-gray-600 dark:text-gray-300 mb-6">
+            {siteConfig.author.bioHeadline}
           </p>
-          <p className="text-xl text-gray-700 mb-8">
+          <p className="text-xl text-gray-700 dark:text-gray-400 mb-8">
             Building Tomorrow's Assistive Technology
           </p>
           
           {/* Social Links */}
           <div className="flex gap-4 justify-center">
             <a 
-              href="https://github.com/yourusername" 
+              href={siteConfig.socials.github} 
               target="_blank"
-              className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-light transition"
+              className="px-6 py-3 bg-primary dark:bg-primary-dark text-white rounded-lg hover:bg-primary-light dark:hover:bg-primary-dark-light transition"
             >
               GitHub
             </a>
             <a 
-              href="https://linkedin.com/in/yourprofile" 
+              href={siteConfig.socials.linkedin} 
               target="_blank"
-              className="px-6 py-3 bg-secondary text-white rounded-lg hover:bg-secondary-light transition"
+              className="px-6 py-3 bg-secondary dark:bg-secondary-dark text-white rounded-lg hover:bg-secondary-light dark:hover:bg-secondary-dark-light transition"
             >
               LinkedIn
             </a>
@@ -38,85 +43,35 @@ export default function Home() {
 
       {/* Featured Projects Preview */}
       <section className="container mx-auto px-4 py-16">
-        <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+        <h2 className="text-3xl font-bold text-center mb-12 text-foreground dark:text-foreground-dark">Featured Projects</h2>
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Project Card 1 */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-            <div className="relative h-48">
-              <Image
-                src="/images/projects/project1.jpg"
-                alt="Project Name 1"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">Project Name 1</h3>
-              <p className="text-gray-600 mb-4">
-                Brief description of the project and what it accomplishes.
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm">
-                  CAD
-                </span>
-                <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">
-                  Arduino
-                </span>
+          {featuredProjects.map(project => (
+            <Link key={project.id} href={`/projects/${project.slug}`}>
+              <div className="bg-white dark:bg-background-dark rounded-lg shadow-lg overflow-hidden hover:shadow-xl dark:hover:shadow-blue-500/50 transition">
+                <div className="relative h-48">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-foreground dark:text-foreground-dark">{project.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                    {project.description}
+                  </p>
+                  <div className="flex gap-2 flex-wrap">
+                    {project.tags.map(tag => (
+                      <span key={tag} className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          {/* Project Card 2 */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-            <div className="relative h-48">
-              <Image
-                src="/images/projects/project2.jpg"
-                alt="Project Name 2"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">Project Name 2</h3>
-              <p className="text-gray-600 mb-4">
-                Brief description of the project and what it accomplishes.
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm">
-                  Python
-                </span>
-                <span className="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm">
-                  3D Print
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* Project Card 3 */}
-          <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
-            <div className="relative h-48">
-              <Image
-                src="/images/projects/project3.jpg"
-                alt="Project Name 3"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2">Project Name 3</h3>
-              <p className="text-gray-600 mb-4">
-                Brief description of the project and what it accomplishes.
-              </p>
-              <div className="flex gap-2 flex-wrap">
-                <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm">
-                  Robotics
-                </span>
-                <span className="px-3 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm">
-                  EMG
-                </span>
-              </div>
-            </div>
-          </div>
+            </Link>
+          ))}
         </div>
       </section>
     </main>
