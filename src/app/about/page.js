@@ -3,7 +3,7 @@ import { siteConfig } from '@/config/siteConfig';
 
 export default function About() {
   return (
-    <main className="min-h-screen bg-background py-12">
+    <main className="min-h-screen bg-background dark:bg-background-dark py-12 transition-colors duration-300">
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="text-4xl font-bold mb-8 text-foreground dark:text-foreground-dark">About Me</h1>
         
@@ -96,10 +96,9 @@ export default function About() {
             <li>→ Respect user autonomy and dignity in its design</li>
           </ul>
           <p className="text-gray-700 dark:text-gray-300">
-            I measure success by whether someone's life genuinely improved, not whether 
-            the technology is impressive. The best designs disappear into intuitive use.
-          </p>
-        </div>
+          I measure success by whether someone&apos;s life genuinely improved, not whether 
+          the technology is impressive. The best designs disappear into intuitive use.
+          </p>        </div>
       </div>
     </main>
   );

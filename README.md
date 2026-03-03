@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Portfolio Website Guide
 
-## Getting Started
+Welcome to your engineering portfolio! This website is built with **Next.js 15+** and **Tailwind CSS v4**. It's designed to be easily customizable through a few key configuration files.
 
-First, run the development server:
+---
 
+## 🛠 1. Quick Personalization (The "Global Text Changer")
+Most of your website's text and links are controlled by **`src/config/siteConfig.js`**. 
+
+Update this file to change:
+- **Your Name & Title:** `author.name`, `author.bioHeadline`
+- **Contact Info:** `author.email`
+- **Social Links:** `socials.github`, `socials.linkedin`
+- **SEO:** `title`, `description` (how your site looks on Google/Twitter)
+- **Home Page Projects:** The `featuredProjects` array (add/remove project slugs here to change what shows on the front page).
+
+---
+
+## 📂 2. Managing Projects
+All project data lives in **`src/data/projects.js`**. 
+
+### How to add a new project:
+1.  **Add Image:** Place a photo in `public/images/projects/`.
+2.  **Add Data:** Copy an existing project object in `projects.js` and update the fields.
+3.  **Set Featured:** Set `featured: true` to make it appear on the Home page automatically.
+
+> **Tip:** Detailed instructions and a copy-paste template can be found in `PROJECT_GUIDE.md`.
+
+---
+
+## 🎨 3. Colors & Styling (Tailwind v4)
+This project uses **Tailwind CSS v4**, which uses CSS variables in **`src/app/globals.css`** for its theme.
+
+### Changing your Color Palette:
+Find the `@theme` block in `src/app/globals.css`. You can change the hex codes for your primary and secondary colors:
+
+```css
+@theme {
+  --color-primary: #0A2463;          /* Main accent color (Buttons, Nav links) */
+  --color-secondary: #00B4D8;        /* Second accent color */
+  --color-background: #ffffff;       /* Page background */
+  --color-foreground: #171717;       /* Main text color */
+  
+  /* Dark Mode specific colors */
+  --color-background-dark: #0a0a0a;
+  --color-foreground-dark: #ededed;
+}
+```
+*When you change these variables, Tailwind automatically updates every button and text element across the site.*
+
+---
+
+## 📄 4. Adding New Pages
+To add a new page (e.g., a "Resume" or "Resources" page):
+1.  Create a new folder in `src/app/` (e.g., `src/app/resume/`).
+2.  Inside that folder, create a `page.js` file.
+3.  Export a default React component from that file.
+4.  Update **`src/components/Navigation.js`** to add a link to your new page.
+
+---
+
+## 🖼 5. Images & Assets
+- **Profile Picture:** Replace `/public/images/profile/profile.jpg`.
+- **Project Images:** Store in `/public/images/projects/`.
+- **Favicon/Icon:** Replace `/src/app/favicon.ico`.
+
+---
+
+## 🌑 6. Dark Mode Logic
+The website features a hybrid Dark Mode:
+1.  **Detection:** A small script in `layout.js` checks for a user's saved preference or system setting before the page loads (to prevent flickering).
+2.  **Toggle:** The `src/components/DarkModeToggle.js` handles manual switching.
+3.  **Styling:** Use the `dark:` prefix in your HTML classes (e.g., `text-black dark:text-white`).
+
+---
+
+## 🚀 7. Development & Deployment
+
+### Run Locally:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Build for Production:
+```bash
+npm run build
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Deployment:
+The easiest way to host this is on **Vercel**:
+1.  Push your code to a GitHub repository.
+2.  Import the repository into Vercel.
+3.  It will automatically detect Next.js and deploy your site!

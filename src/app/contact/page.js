@@ -2,7 +2,7 @@ import { siteConfig } from '@/config/siteConfig';
 
 export default function Contact() {
   return (
-    <main className="min-h-screen bg-background py-12">
+    <main className="min-h-screen bg-background dark:bg-background-dark py-12 transition-colors duration-300">
       <div className="container mx-auto px-4 max-w-2xl">
         <h1 className="text-4xl font-bold text-center mb-4 text-foreground dark:text-foreground-dark">Get In Touch</h1>
         <p className="text-xl text-gray-600 dark:text-gray-300 text-center mb-12">
@@ -62,7 +62,7 @@ export default function Contact() {
 
         {/* What to Reach Out About */}
         <div className="bg-white dark:bg-background-dark rounded-lg p-8">
-          <h2 className="text-2xl font-bold mb-4 text-foreground dark:text-foreground-dark">Let's Discuss</h2>
+          <h2 className="text-2xl font-bold mb-4 text-foreground dark:text-foreground-dark">Let&apos;s Discuss</h2>
           <ul className="space-y-3 text-gray-700 dark:text-gray-300">
             {siteConfig.contact.discussionTopics.map((topic, index) => (
               <li key={index}>{topic}</li>

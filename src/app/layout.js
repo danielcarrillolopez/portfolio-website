@@ -13,8 +13,23 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={siteConfig.darkMode ? 'dark' : ''}>
-      <body className={`${inter.className} bg-background text-foreground dark:bg-background-dark dark:text-foreground-dark`}>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              try {
+                if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                  document.documentElement.classList.add('dark')
+                } else {
+                  document.documentElement.classList.remove('dark')
+                }
+              } catch (_) {}
+            `,
+          }}
+        />
+      </head>
+      <body className={`${inter.className} bg-background text-foreground dark:bg-background-dark dark:text-foreground-dark transition-colors duration-300`}>
         <Navigation />
         {children}
         

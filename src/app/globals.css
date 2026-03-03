@@ -1,71 +1,63 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@theme {
+  /* Colors */
+  --color-primary: #0A2463;
+  --color-primary-light: #1e3a8a;
+  --color-secondary: #00B4D8;
+  --color-secondary-light: #38bdf8;
+  --color-background: #ffffff;
+  --color-foreground: #171717;
+
+  /* Dark mode specific colors for easier reference if needed */
+  --color-primary-dark: #38bdf8;
+  --color-primary-dark-light: #7dd3fc;
+  --color-secondary-dark: #00B4D8;
+  --color-secondary-dark-light: #38bdf8;
+  --color-background-dark: #0a0a0a;
+  --color-foreground-dark: #ededed;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+/* Explicitly support the .dark class for v4 */
+@variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+
+  /* Fallback for components that might not pick up the variant automatically */
+  .dark body {
+    @apply bg-background-dark text-foreground-dark;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+@layer components {
+  .prose {
+    @apply text-gray-700 dark:text-gray-300 max-w-none;
+  }
 
-/* Better typography for project content */
-.prose {
-  color: #374151;
-}
+  .prose h2 {
+    @apply text-3xl font-bold mt-8 mb-4 text-foreground dark:text-foreground-dark;
+  }
 
-.prose h2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-  color: #111827;
-}
+  .prose h3 {
+    @apply text-2xl font-semibold mt-6 mb-3 text-foreground dark:text-foreground-dark;
+  }
 
-.prose h3 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
-  color: #1f2937;
-}
+  .prose p {
+    @apply mb-5 leading-relaxed;
+  }
 
-.prose p {
-  margin-bottom: 1.25rem;
-  line-height: 1.75;
-}
+  .prose ul {
+    @apply mb-5 pl-6 list-disc;
+  }
 
-.prose ul {
-  margin-bottom: 1.25rem;
-  padding-left: 1.5rem;
-}
+  .prose li {
+    @apply mb-2;
+  }
 
-.prose li {
-  margin-bottom: 0.5rem;
-}
-
-.prose a {
-  color: #00B4D8;
-  text-decoration: underline;
-}
-
-.prose a:hover {
-  color: #0284c7;
+  .prose a {
+    @apply text-secondary hover:text-secondary-light underline;
+  }
 }

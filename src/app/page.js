@@ -4,7 +4,9 @@ import { siteConfig } from '@/config/siteConfig';
 import { projects } from '@/data/projects';
 
 export default function Home() {
-  const featuredProjects = projects.filter(p => siteConfig.featuredProjects.includes(p.slug));
+  const featuredProjects = projects.filter(p => 
+    p.featured === true || siteConfig.featuredProjects.includes(p.slug)
+  );
 
   return (
     <main className="min-h-screen bg-background dark:bg-background-dark">
@@ -18,7 +20,7 @@ export default function Home() {
             {siteConfig.author.bioHeadline}
           </p>
           <p className="text-xl text-gray-700 dark:text-gray-400 mb-8">
-            Building Tomorrow's Assistive Technology
+            Building Tomorrow&apos;s Assistive Technology
           </p>
           
           {/* Social Links */}
