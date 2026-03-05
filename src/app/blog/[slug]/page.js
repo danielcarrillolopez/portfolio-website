@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
+import RelatedContent from '@/components/RelatedContent';
+import { getRelatedPosts } from '@/utils/relatedContent';
 
 export default async function BlogPost({ params }) {
   const { slug } = await params;
@@ -11,6 +13,8 @@ export default async function BlogPost({ params }) {
   if (!post) {
     notFound();
   }
+
+  const relatedPosts = getRelatedPosts(post, posts);
 
   return (
     <main className="min-h-screen bg-background dark:bg-background-dark py-12 transition-colors duration-300">
@@ -66,6 +70,12 @@ export default async function BlogPost({ params }) {
             </Link>
           </div>
         </div>
+
+        <RelatedContent 
+          items={relatedPosts} 
+          type="blog" 
+          title="Continue Reading" 
+        />
       </article>
     </main>
   );

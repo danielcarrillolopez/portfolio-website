@@ -48,7 +48,26 @@ export const projects = [
       Next version will include force feedback, improved finger mechanics, 
       and machine learning for pattern recognition. Long-term goal is 
       FDA approval pathway research.
-    `
+    `,
+    youtubeId: 'dQw4w9WgXcQ', // Placeholder
+    gallery: [
+      '/images/projects/prosthetic-hand.jpg',
+      '/images/projects/robotics-kit.jpg',
+      '/images/projects/prosthetic-hand.jpg'
+    ],
+    specs: {
+      "Actuators": "5x MG996R Servos",
+      "Sensors": "3x MyoWare EMG",
+      "Control": "Arduino Nano",
+      "Grip Strength": "12N",
+      "Response Time": "<150ms",
+      "Weight": "420g"
+    },
+    collaboration: {
+      active: true,
+      role: "Firmware Optimization & ML pattern recognition",
+      description: "Looking for engineers to help transition the control logic from simple thresholds to a machine learning model."
+    }
   },
   {
     id: 2,
@@ -93,7 +112,12 @@ export const projects = [
     futureWork: `
       Developing a mobile app for remote control and more advanced 
       sensor modules like ultrasonic and color sensors.
-    `
+    `,
+    gallery: [
+      '/images/projects/robotics-kit.jpg',
+      '/images/projects/prosthetic-hand.jpg',
+      '/images/projects/robotics-kit.jpg'
+    ]
   },
   {
     id: 3,
@@ -107,6 +131,7 @@ export const projects = [
     cost: '$45',
     featured: true,
     github: 'https://github.com/yourusername/smart-irrigation',
+    youtubeId: 'dQw4w9WgXcQ', // Placeholder
     problem: `
       Traditional irrigation systems follow strict timers, leading to significant water waste 
       during rain or over-watering when the soil is already saturated.
@@ -180,5 +205,59 @@ export const projects = [
       Implementing a more robust aluminum chassis for better thermal management 
       and seeking third-party microbiological validation.
     `
+  },
+  {
+    id: 5,
+    slug: 'solar-field-charger',
+    title: 'Portable Solar Field Charger',
+    description: 'A rugged, high-efficiency solar harvesting system designed for off-grid fieldwork and emergency charging.',
+    image: '/images/projects/robotics-kit.jpg', // Placeholder
+    tags: ['Renewable Energy', 'Electronics', 'Rugged Design'],
+    date: 'December 2024',
+    duration: '5 weeks',
+    cost: '$120',
+    featured: false,
+    github: 'https://github.com/yourusername/solar-charger',
+    problem: `
+      Researchers in the field often lack reliable power for high-draw devices. 
+      Commercial power banks are too fragile or take too long to recharge via small panels.
+    `,
+    approach: `
+      I designed a folding 40W system with an integrated MPPT controller to maximize 
+      energy harvest even in partial shade. The electronics are housed in a 3D printed 
+      shock-resistant casing.
+    `,
+    technicalDetails: [
+      'Solar Cells: Monocrystalline (22% efficiency)',
+      'Charging Logic: MPPT (Maximum Power Point Tracking)',
+      'Protection: Overcharge & Thermal Cutoff',
+      'Input: 18V-24V DC',
+      'Output: Dual USB-C PD (60W max)'
+    ],
+    results: `
+      Successfully maintained a 100% charge on a field laptop over a 12-hour 
+      continuous usage test during a summer field expedition.
+    `,
+    lessons: [
+      'Heat dissipation for the MPPT controller was the biggest challenge',
+      'Used aluminum heat sinks integrated into the case design',
+      'Wiring gauges need to be oversized to minimize transmission loss'
+    ],
+    futureWork: `
+      Adding an OLED display for real-time wattage tracking and weather logging.
+    `,
+    specs: {
+      "Peak Power": "40W",
+      "Output Voltage": "5V / 9V / 12V / 20V",
+      "Controller Efficiency": "96%",
+      "Operating Temp": "-20°C to 60°C",
+      "Dimensions (Folded)": "250 x 180 x 40mm",
+      "Weight": "1.2kg"
+    },
+    collaboration: {
+      active: true,
+      role: "Mechanical Ruggedization",
+      description: "Seeking feedback on the folding hinge mechanism to ensure it can withstand 1000+ cycles in sandy environments."
+    }
   }
 ];

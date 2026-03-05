@@ -31,6 +31,12 @@ export default function Navigation() {
               Blog
             </Link>
             <Link 
+              href="/resources" 
+              className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-dark font-medium transition"
+            >
+              Resources
+            </Link>
+            <Link 
               href="/about" 
               className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-dark font-medium transition"
             >

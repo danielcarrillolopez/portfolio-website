@@ -15,6 +15,7 @@ export const siteConfig = {
     name: "[YOUR NAME]",
     email: "[YOUR_EMAIL_ADDRESS]",
     bioHeadline: "[YOUR BIO HEADLINE]",
+    mission: "Engineering to reduce human suffering and expand human capability through accessible, human-centered assistive technology.",
   },
 
   // Technical Skills Categories
@@ -34,6 +35,53 @@ export const siteConfig = {
     {
       category: "Soft Skills",
       items: ["Technical Writing", "Project Management", "STEAM Education", "Public Speaking"]
+    }
+  ],
+
+  // Core Principles (Moved from Methodology)
+  principles: [
+    {
+      title: "Human-Centered Design",
+      description: "Prioritizing the end-user's physical comfort and dignity above all other design constraints.",
+      icon: "🧠"
+    },
+    {
+      title: "Design for Manufacturing (DFM)",
+      description: "Ensuring every component is optimized for its specific production method to reduce waste and cost.",
+      icon: "🏭"
+    },
+    {
+      title: "Open Source Ethos",
+      description: "Believing that shared knowledge accelerates innovation and improves accessibility in medical tech.",
+      icon: "🔓"
+    }
+  ],
+
+  // Inspiration & Learning Resources (Enhanced Feature #11)
+  resources: [
+    { 
+      title: "Design for the Real World", 
+      author: "Victor Papanek", 
+      type: "Book",
+      description: "A foundational text on social and environmental responsibility in design.",
+      url: "https://www.amazon.com/Design-Real-World-Victor-Papanek/dp/0500285335",
+      image: "/images/projects/prosthetic-hand.jpg" // Placeholder
+    },
+    { 
+      title: "The Design of Everyday Things", 
+      author: "Don Norman", 
+      type: "Book",
+      description: "Explores the cognitive psychology behind how people interact with objects.",
+      url: "https://jnd.org/the-design-of-everyday-things-revised-and-expanded-edition/",
+      image: "/images/projects/robotics-kit.jpg" // Placeholder
+    },
+    { 
+      title: "Hackaday", 
+      author: "Community", 
+      type: "Website",
+      description: "A goldmine for hardware engineering inspiration and teardowns.",
+      url: "https://hackaday.com/",
+      image: "/images/projects/prosthetic-hand.jpg" // Placeholder
     }
   ],
 

@@ -2,6 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { projects } from '@/data/projects';
 import { notFound } from 'next/navigation';
+import ImageGallery from '@/components/ImageGallery';
+import YouTubeEmbed from '@/components/YouTubeEmbed';
+import TechSpecs from '@/components/TechSpecs';
+import CollabInvitation from '@/components/CollabInvitation';
+import RelatedContent from '@/components/RelatedContent';
+import { getRelatedProjects } from '@/utils/relatedContent';
 
 export default async function ProjectDetail({ params }) {
   // Await params in Next.js 15+
@@ -14,6 +20,8 @@ export default async function ProjectDetail({ params }) {
   if (!project) {
     notFound();
   }
+
+  const relatedProjects = getRelatedProjects(project, projects);
 
   return (
     <main className="min-h-screen bg-background dark:bg-background-dark py-12 transition-colors duration-300">
@@ -108,6 +116,12 @@ export default async function ProjectDetail({ params }) {
           )}
         </div>
 
+        <TechSpecs specs={project.specs} />
+
+        <ImageGallery images={project.gallery} />
+
+        <YouTubeEmbed id={project.youtubeId} />
+
         <div className="mt-12 p-8 bg-zinc-50 dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-zinc-800 shadow-sm">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
             <div>
@@ -137,6 +151,14 @@ export default async function ProjectDetail({ params }) {
             </div>
           </div>
         </div>
+
+        <CollabInvitation project={project} collab={project.collaboration} />
+
+        <RelatedContent 
+          items={relatedProjects} 
+          type="projects" 
+          title="Explore Similar Projects" 
+        />
       </div>
     </main>
   );
