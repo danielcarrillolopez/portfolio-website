@@ -25,6 +25,12 @@ export default function Navigation() {
               Projects
             </Link>
             <Link 
+              href="/blog" 
+              className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-dark font-medium transition"
+            >
+              Blog
+            </Link>
+            <Link 
               href="/about" 
               className="text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary-dark font-medium transition"
             >

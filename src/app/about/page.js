@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { siteConfig } from '@/config/siteConfig';
+import SkillsGrid from '@/components/SkillsGrid';
 
 export default function About() {
   return (
@@ -8,14 +9,14 @@ export default function About() {
         <h1 className="text-4xl font-bold mb-8 text-foreground dark:text-foreground-dark">About Me</h1>
         
         {/* Profile Section */}
-        <div className="flex flex-col md:flex-row gap-8 mb-12">
+        <div className="flex flex-col md:flex-row gap-8 mb-16">
           <div className="md:w-1/3">
             <div className="relative w-64 h-64 mx-auto">
               <Image
                 src="/images/profile/profile.jpg"
                 alt={siteConfig.author.name}
                 fill
-                className="object-cover rounded-lg"
+                className="object-cover rounded-2xl shadow-lg"
               />
             </div>
           </div>
@@ -35,50 +36,9 @@ export default function About() {
         </div>
 
         {/* Skills Section */}
-        <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-foreground dark:text-foreground-dark">Technical Skills</h2>
-          
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h3 className="text-lg font-semibold mb-3 text-foreground dark:text-foreground-dark">CAD & Design</h3>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                <li>• SolidWorks</li>
-                <li>• Fusion 360</li>
-                <li>• Parametric modeling</li>
-                <li>• DFM principles</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-3 text-foreground dark:text-foreground-dark">Programming</h3>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                <li>• Python</li>
-                <li>• C/C++</li>
-                <li>• Arduino</li>
-                <li>• Raspberry Pi</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-3 text-foreground dark:text-foreground-dark">Electronics</h3>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                <li>• Circuit design</li>
-                <li>• PCB layout</li>
-                <li>• Sensor integration</li>
-                <li>• Motor control</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-3 text-foreground dark:text-foreground-dark">Fabrication</h3>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                <li>• 3D printing (FDM/SLA)</li>
-                <li>• CNC machining</li>
-                <li>• Laser cutting</li>
-                <li>• Woodworking</li>
-              </ul>
-            </div>
-          </div>
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-foreground dark:text-foreground-dark border-b border-gray-200 dark:border-zinc-800 pb-2">Technical Skills</h2>
+          <SkillsGrid />
         </div>
 
         {/* Philosophy Section */}

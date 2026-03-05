@@ -17,6 +17,26 @@ export const siteConfig = {
     bioHeadline: "[YOUR BIO HEADLINE]",
   },
 
+  // Technical Skills Categories
+  skills: [
+    {
+      category: "CAD & Design",
+      items: ["SolidWorks", "Fusion 360", "Parametric Modeling", "DFM Principles", "Rendering"]
+    },
+    {
+      category: "Programming & Control",
+      items: ["Python", "C/C++", "Arduino", "Raspberry Pi", "MATLAB", "Git"]
+    },
+    {
+      category: "Electronics & Fabrication",
+      items: ["Circuit Design", "PCB Layout", "3D Printing (FDM/SLA)", "CNC Machining", "Laser Cutting"]
+    },
+    {
+      category: "Soft Skills",
+      items: ["Technical Writing", "Project Management", "STEAM Education", "Public Speaking"]
+    }
+  ],
+
   // Social Media Links
   socials: {
     github: "https://github.com/[YOUR_GITHUB_USERNAME]",

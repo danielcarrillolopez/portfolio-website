@@ -14,14 +14,24 @@ export default function ContactForm() {
     message: ''
   });
 
-  // Handle pre-filling from query params (e.g. from a specific project page)
+  // Handle pre-filling from query params (e.g. from a specific project page or blog)
   useEffect(() => {
     const projectSlug = searchParams.get('project');
+    const customSubject = searchParams.get('subject');
+
     if (projectSlug) {
       setFormData(prev => ({
         ...prev,
         subject: "📄 Request Project Documentation (CAD/BOM)",
         message: `I would like to request access to the documentation for the project: ${projectSlug}. \n\nI intend to use it for: [Your reason here]`
+      }));
+    } else if (customSubject) {
+      setFormData(prev => ({
+        ...prev,
+        subject: siteConfig.contact.discussionTopics.includes(customSubject) 
+          ? customSubject 
+          : "🔬 Technical Questions", // Default to tech questions if custom not in list
+        message: `Re: ${customSubject}\n\n[Your message here]`
       }));
     }
   }, [searchParams]);
