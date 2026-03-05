@@ -108,19 +108,35 @@ export default async function ProjectDetail({ params }) {
           )}
         </div>
 
-        {project.github && (
-          <div className="mt-12 p-6 bg-gray-50 dark:bg-zinc-900 rounded-lg border border-gray-200 dark:border-gray-800">
-            <h3 className="text-xl font-bold mb-4 text-foreground dark:text-foreground-dark">Project Files</h3>
-            <a 
-              href={project.github} 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-primary dark:bg-primary-dark text-white rounded-lg hover:bg-primary-light dark:hover:bg-primary-dark-light transition inline-block"
-            >
-              View on GitHub
-            </a>
+        <div className="mt-12 p-8 bg-zinc-50 dark:bg-zinc-900 rounded-xl border border-gray-200 dark:border-zinc-800 shadow-sm">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
+            <div>
+              <h3 className="text-2xl font-bold mb-2 text-foreground dark:text-foreground-dark">Project Documentation</h3>
+              <p className="text-gray-600 dark:text-gray-400 max-w-md">
+                Interested in the technical CAD files, BOM, or detailed build logs? 
+                Request access below to discuss licensing and project details.
+              </p>
+            </div>
+            <div className="flex flex-col gap-3">
+              <Link 
+                href={`/contact?project=${project.slug}`}
+                className="px-8 py-4 bg-primary dark:bg-primary-dark text-white text-center font-bold rounded-lg hover:bg-primary-light transition-all shadow-lg hover:shadow-primary/20"
+              >
+                Request Access
+              </Link>
+              {project.github && (
+                <a 
+                  href={project.github} 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-center text-sm font-medium text-gray-500 hover:text-primary dark:hover:text-primary-dark transition-colors"
+                >
+                  View Public Code on GitHub →
+                </a>
+              )}
+            </div>
           </div>
-        )}
+        </div>
       </div>
     </main>
   );

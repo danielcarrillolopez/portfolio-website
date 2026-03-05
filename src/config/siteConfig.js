@@ -23,6 +23,13 @@ export const siteConfig = {
     linkedin: "https://linkedin.com/in/[YOUR_LINKEDIN_PROFILE]",
   },
 
+  // Availability Status
+  availability: {
+    status: "Available", // e.g., "Available", "Busy", "Seeking Internships"
+    message: "Seeking Summer 2025 Internships",
+    showBadge: true,
+  },
+
   // Dark Mode Configuration
   // Set to 'true' to enable dark mode by default, 'false' for light mode
   darkMode: false,
@@ -37,13 +44,14 @@ export const siteConfig = {
 
   // Contact Page Settings
   contact: {
-    tagline: "[YOUR CONTACT PAGE TAGLINE]",
+    tagline: "Have a project in mind or want to discuss my work? Reach out below.",
+    emailServiceId: "", // Placeholder for service like Formspree
     discussionTopics: [
-      "✓ [TOPIC 1 YOU'RE OPEN TO DISCUSSING]",
-      "✓ [TOPIC 2 YOU'RE OPEN TO DISCUSSING]",
-      "✓ [TOPIC 3 YOU'RE OPEN TO DISCUSSING]",
-      "✓ [TOPIC 4 YOU'RE OPEN TO DISCUSSING]",
-      "✓ [TOPIC 5 YOU'RE OPEN TO DISCUSSING]",
+      "📄 Request Project Documentation (CAD/BOM)",
+      "🤝 Collaboration Opportunities",
+      "💼 Internship/Full-time Inquiries",
+      "🔬 Technical Questions",
+      "☕ General Networking",
     ],
   },
 };
