@@ -12,36 +12,72 @@ Open `src/data/projects.js` and copy-paste this template into the `projects` arr
 
 ```javascript
   {
-    id: 3, // Increment this number
-    slug: 'my-new-project', // This becomes the URL: /projects/my-new-project
+    id: 5, // Increment this number
+    slug: 'my-new-project',
     title: 'Project Title',
     description: 'A short 1-2 sentence preview for the card.',
     image: '/images/projects/my-new-project.jpg',
-    tags: ['Tag 1', 'Tag 2'], // e.g., 'Python', 'CAD'
+    tags: ['Python', 'CAD'],
     date: 'Month Year',
     duration: 'X weeks',
     cost: '$XXX',
-    featured: true, // Set to 'true' to show on the Homepage
+    featured: true,
     github: 'https://github.com/yourusername/repo',
-    
-    // Detailed Content for the Project Page
-    problem: `Describe the challenge you were solving here.`,
-    approach: `Describe your engineering process and design choices.`,
-    technicalDetails: [
-      'Detail 1 (e.g., Microcontroller used)',
-      'Detail 2 (e.g., Software stack)',
-      'Detail 3 (e.g., Materials)',
+    youtubeId: 'VIDEO_ID', // Optional: YouTube video ID
+    gallery: [             // Optional: Array of image paths
+      '/images/projects/img1.jpg',
+      '/images/projects/img2.jpg'
     ],
-    results: `What was the final outcome? Did it work?`,
-    lessons: [
-      'What did you learn?',
-      'What would you do differently?',
-    ],
-    futureWork: `What are the next steps for this project?`,
+    specs: {               // Optional: Key-value pairs for technical specs
+      "Power": "12V",
+      "Material": "Carbon Fiber"
+    },
+    collaboration: {       // Optional: Set to active to show collab invite
+      active: true,
+      role: "Firmware Dev",
+      description: "Need help with X..."
+    },
+    problem: `...`,
+    approach: `...`,
+    technicalDetails: [...],
+    results: `...`,
+    lessons: [...],
+    futureWork: `...`,
   },
 ```
 
-## Step 3: (Optional) Manage Featured Projects
+## Step 3: Add a Blog Post (`src/data/posts.js`)
+```javascript
+  {
+    id: 3,
+    slug: 'my-post-title',
+    title: 'Post Title',
+    excerpt: 'Short summary for the blog list page.',
+    date: 'Month Day, Year',
+    category: 'Engineering Insights', // Use a unique name for color-coding
+    readTime: '5 min read',
+    image: '/images/projects/image.jpg',
+    tags: ['Robotics', 'Tutorial'],
+    content: `
+# My Header
+Supporting full **Markdown** syntax here.
+    `
+  },
+```
+
+## Step 4: Add a Resource (`src/config/siteConfig.js`)
+```javascript
+    { 
+      title: "Title", 
+      author: "Author", 
+      type: "Book", // This is used for filtering
+      description: "Description...",
+      url: "https://...",
+      image: "/images/projects/image.jpg"
+    },
+```
+
+## Step 5: (Optional) Manage Featured Projects
 There are two ways to make a project appear on the Homepage:
 
 1. **The Easy Way:** Set `featured: true` in the project object (see Step 2).

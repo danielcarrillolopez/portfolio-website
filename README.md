@@ -4,27 +4,24 @@ Welcome to your engineering portfolio! This website is built with **Next.js 15+*
 
 ---
 
-## 🛠 1. Quick Personalization (The "Global Text Changer")
-Most of your website's text and links are controlled by **`src/config/siteConfig.js`**. 
+## 📂 2. Managing Projects, Blogs, and Resources
+All data-driven content is stored in the `src/data/` or `src/config/` directories.
 
-Update this file to change:
-- **Your Name & Title:** `author.name`, `author.bioHeadline`
-- **Contact Info:** `author.email`
-- **Social Links:** `socials.github`, `socials.linkedin`
-- **SEO:** `title`, `description` (how your site looks on Google/Twitter)
-- **Home Page Projects:** The `featuredProjects` array (add/remove project slugs here to change what shows on the front page).
-
----
-
-## 📂 2. Managing Projects
-All project data lives in **`src/data/projects.js`**. 
-
-### How to add a new project:
+### How to add a new Project:
 1.  **Add Image:** Place a photo in `public/images/projects/`.
-2.  **Add Data:** Copy an existing project object in `projects.js` and update the fields.
-3.  **Set Featured:** Set `featured: true` to make it appear on the Home page automatically.
+2.  **Add Data:** Copy an existing project object in `src/data/projects.js` and update the fields.
+3.  **Features:** You can toggle `gallery`, `youtubeId`, `specs`, and `collaboration` by adding those objects to the data.
 
-> **Tip:** Detailed instructions and a copy-paste template can be found in `PROJECT_GUIDE.md`.
+### How to add a new Blog Post:
+1.  **Add Data:** Open `src/data/posts.js`.
+2.  **Template:** Copy an existing post object. Ensure you use a unique `slug`.
+3.  **Markdown:** The `content` field supports full Markdown (headers, lists, code blocks).
+4.  **Tags:** The top-left category badge is color-coded automatically based on the `category` string.
+
+### How to add a new Resource:
+1.  **Add Data:** Open `src/config/siteConfig.js` and find the `resources` array.
+2.  **Fields:** Each resource needs a `title`, `author`, `type` (e.g., Book, Website), `description`, `url`, and `image`.
+3.  **Filtering:** The Resources page will automatically add new `type` values to the filter list.
 
 ---
 
