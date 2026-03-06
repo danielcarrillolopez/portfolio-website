@@ -68,21 +68,25 @@ export default function BlogShowcase({ initialPosts }) {
       <div className="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-gray-100 dark:border-zinc-800 shadow-sm space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-xs font-bold uppercase text-gray-400 mb-2 ml-1 tracking-widest">Search Articles</label>
+            <label htmlFor="blog-search" className="block text-xs font-bold uppercase text-gray-400 mb-2 ml-1 tracking-widest">Search Articles</label>
             <input 
+              id="blog-search"
               type="text"
               placeholder="Search by title, topic, or keywords..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full px-4 py-2.5 bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark transition"
+              aria-label="Search blog articles"
             />
           </div>
           <div>
-            <label className="block text-xs font-bold uppercase text-gray-400 mb-2 ml-1 tracking-widest">Sort By</label>
+            <label htmlFor="blog-sort" className="block text-xs font-bold uppercase text-gray-400 mb-2 ml-1 tracking-widest">Sort By</label>
             <select 
+              id="blog-sort"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
               className="w-full px-4 py-2.5 bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark transition"
+              aria-label="Sort blog articles"
             >
               <option value="newest">Newest First</option>
               <option value="oldest">Oldest First</option>
@@ -95,16 +99,21 @@ export default function BlogShowcase({ initialPosts }) {
           <div className="flex justify-between items-center mb-3 ml-1">
             <label className="block text-xs font-bold uppercase text-gray-400 tracking-widest">Filter by Topic</label>
             {hasActiveFilters && (
-              <button onClick={clearFilters} className="text-xs font-bold text-red-500 hover:underline flex items-center gap-1">
+              <button 
+                onClick={clearFilters} 
+                className="text-xs font-bold text-red-500 hover:underline flex items-center gap-1"
+                aria-label="Clear all filters"
+              >
                 ✕ Clear All
               </button>
             )}
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2" role="group" aria-label="Filter topics">
             {allTags.map(tag => (
               <button
                 key={tag}
                 onClick={() => toggleTag(tag)}
+                aria-pressed={selectedTags.includes(tag)}
                 className={`px-3 py-1.5 border rounded-lg text-xs font-bold transition-all duration-200 ${
                   selectedTags.includes(tag) 
                   ? 'bg-primary dark:bg-primary-dark text-white border-primary dark:border-primary-dark shadow-md scale-105' 
@@ -116,6 +125,10 @@ export default function BlogShowcase({ initialPosts }) {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="sr-only" aria-live="polite" role="status">
+        Showing {filteredPosts.length} {filteredPosts.length === 1 ? 'article' : 'articles'}
       </div>
 
       <p className="text-sm font-medium text-gray-500 ml-1">

@@ -52,21 +52,25 @@ export default function ResourceShowcase({ initialResources }) {
       <div className="bg-white dark:bg-zinc-900 p-6 rounded-xl border border-gray-100 dark:border-zinc-800 shadow-sm space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label className="block text-xs font-bold uppercase text-gray-400 mb-2 ml-1 tracking-widest">Search Resources</label>
+            <label htmlFor="resource-search" className="block text-xs font-bold uppercase text-gray-400 mb-2 ml-1 tracking-widest">Search Resources</label>
             <input 
+              id="resource-search"
               type="text"
               placeholder="Search by title, author, or topic..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full px-4 py-2.5 bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark transition"
+              aria-label="Search curated resources"
             />
           </div>
           <div>
-            <label className="block text-xs font-bold uppercase text-gray-400 mb-2 ml-1 tracking-widest">Sort By</label>
+            <label htmlFor="resource-sort" className="block text-xs font-bold uppercase text-gray-400 mb-2 ml-1 tracking-widest">Sort By</label>
             <select 
+              id="resource-sort"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
               className="w-full px-4 py-2.5 bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark transition"
+              aria-label="Sort curated resources"
             >
               <option value="alphabetical">Title (A-Z)</option>
               <option value="type">Category Type</option>
@@ -78,16 +82,21 @@ export default function ResourceShowcase({ initialResources }) {
           <div className="flex justify-between items-center mb-3 ml-1">
             <label className="block text-xs font-bold uppercase text-gray-400 tracking-widest">Filter by Category</label>
             {(searchQuery || selectedTypes.length > 0) && (
-              <button onClick={clearFilters} className="text-xs font-bold text-red-500 hover:underline">
+              <button 
+                onClick={clearFilters} 
+                className="text-xs font-bold text-red-500 hover:underline"
+                aria-label="Clear all resource filters"
+              >
                 ✕ Clear All
               </button>
             )}
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2" role="group" aria-label="Filter resource categories">
             {allTypes.map(type => (
               <button
                 key={type}
                 onClick={() => toggleType(type)}
+                aria-pressed={selectedTypes.includes(type)}
                 className={`px-3 py-1.5 border rounded-lg text-xs font-bold transition-all duration-200 ${
                   selectedTypes.includes(type) 
                   ? 'bg-primary dark:bg-primary-dark text-white border-primary' 
@@ -99,6 +108,10 @@ export default function ResourceShowcase({ initialResources }) {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="sr-only" aria-live="polite" role="status">
+        Showing {filteredResources.length} {filteredResources.length === 1 ? 'resource' : 'resources'}
       </div>
 
       {/* Resource Grid */}

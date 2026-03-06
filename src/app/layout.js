@@ -31,7 +31,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${inter.className} bg-background text-foreground dark:bg-background-dark dark:text-foreground-dark transition-colors duration-300`}>
         <Navigation />
-        {children}
+        <main id="main-content">
+          {children}
+        </main>
         
         {/* Footer */}
         <footer className="bg-primary dark:bg-primary-dark text-white py-8 mt-20">

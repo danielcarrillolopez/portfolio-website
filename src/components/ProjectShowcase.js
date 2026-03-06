@@ -74,23 +74,27 @@ export default function ProjectShowcase({ initialProjects }) {
         <div className="grid md:grid-cols-2 gap-6">
           {/* Search */}
           <div>
-            <label className="block text-xs font-bold uppercase text-gray-400 mb-2 ml-1 tracking-widest">Search</label>
+            <label htmlFor="project-search" className="block text-xs font-bold uppercase text-gray-400 mb-2 ml-1 tracking-widest">Search</label>
             <input 
+              id="project-search"
               type="text"
               placeholder="Search by title, tech, or description..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full px-4 py-2.5 bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark transition"
+              aria-label="Search projects"
             />
           </div>
 
           {/* Sort */}
           <div>
-            <label className="block text-xs font-bold uppercase text-gray-400 mb-2 ml-1 tracking-widest">Sort By</label>
+            <label htmlFor="project-sort" className="block text-xs font-bold uppercase text-gray-400 mb-2 ml-1 tracking-widest">Sort By</label>
             <select 
+              id="project-sort"
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
               className="w-full px-4 py-2.5 bg-gray-50 dark:bg-zinc-800 border border-gray-200 dark:border-zinc-700 rounded-lg outline-none focus:ring-2 focus:ring-primary dark:focus:ring-primary-dark transition"
+              aria-label="Sort projects"
             >
               <option value="newest">Newest First</option>
               <option value="oldest">Oldest First</option>
@@ -107,18 +111,20 @@ export default function ProjectShowcase({ initialProjects }) {
               <button 
                 onClick={clearFilters}
                 className="text-xs font-bold text-red-500 hover:text-red-600 transition-colors flex items-center gap-1"
+                aria-label="Clear all project filters"
               >
                 <span>✕</span> Clear All Filters
               </button>
             )}
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2" role="group" aria-label="Filter tech stack">
             {allTags.map(tag => {
               const isActive = selectedTags.includes(tag);
               return (
                 <button
                   key={tag}
                   onClick={() => toggleTag(tag)}
+                  aria-pressed={isActive}
                   className={`px-3 py-1.5 border rounded-lg text-xs font-bold transition-all duration-200 ${
                     isActive 
                     ? 'bg-primary dark:bg-primary-dark text-white border-primary dark:border-primary-dark shadow-md scale-105' 
@@ -135,6 +141,9 @@ export default function ProjectShowcase({ initialProjects }) {
 
       {/* Results Header */}
       <div className="flex justify-between items-center px-1">
+        <div className="sr-only" aria-live="polite" role="status">
+          Showing {filteredProjects.length} {filteredProjects.length === 1 ? 'project' : 'projects'}
+        </div>
         <p className="text-sm font-medium text-gray-500">
           Showing {filteredProjects.length} {filteredProjects.length === 1 ? 'project' : 'projects'}
         </p>
