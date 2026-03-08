@@ -5,6 +5,8 @@ import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import RelatedContent from '@/components/RelatedContent';
 import { getRelatedPosts } from '@/utils/relatedContent';
+import fs from 'fs';
+import path from 'path';
 
 export default async function BlogPost({ params }) {
   const { slug } = await params;
@@ -12,6 +14,17 @@ export default async function BlogPost({ params }) {
 
   if (!post) {
     notFound();
+  }
+
+  // Read content from individual file
+  let content = post.content || ''; // Fallback to inline if exists
+  try {
+    const filePath = path.join(process.cwd(), 'src/content/blog', `${slug}.md`);
+    if (fs.existsSync(filePath)) {
+      content = fs.readFileSync(filePath, 'utf8');
+    }
+  } catch (error) {
+    console.error(`Error reading blog content for ${slug}:`, error);
   }
 
   const relatedPosts = getRelatedPosts(post, posts);
@@ -52,7 +65,7 @@ export default async function BlogPost({ params }) {
         </header>
 
         <div className="prose prose-lg dark:prose-invert max-w-none text-foreground dark:text-foreground-dark">
-          <ReactMarkdown>{post.content}</ReactMarkdown>
+          <ReactMarkdown>{content}</ReactMarkdown>
         </div>
 
         <div className="mt-16 pt-8 border-t border-gray-100 dark:border-zinc-800">

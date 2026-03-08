@@ -6,16 +6,16 @@
   --color-primary-light: #1e3a8a;
   --color-secondary: #00B4D8;
   --color-secondary-light: #38bdf8;
-  --color-background: #ffffff;
-  --color-foreground: #171717;
+  --color-background: #f4f4f6;
+  --color-foreground: #272324;
 
   /* Dark mode specific colors for easier reference if needed */
-  --color-primary-dark: #38bdf8;
-  --color-primary-dark-light: #7dd3fc;
-  --color-secondary-dark: #00B4D8;
-  --color-secondary-dark-light: #38bdf8;
-  --color-background-dark: #0a0a0a;
-  --color-foreground-dark: #ededed;
+  --color-primary-dark: #00B4D8;
+  --color-primary-dark-light: #38bdf8;
+  --color-secondary-dark: #015b81;
+  --color-secondary-dark-light: #016894;
+  --color-background-dark: #272324;
+  --color-foreground-dark: #f4f4f6;
 }
 
 /* Explicitly support the .dark class for v4 */

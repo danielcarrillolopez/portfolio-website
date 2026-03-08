@@ -7,7 +7,7 @@ export const siteConfig = {
   
   // SEO Meta Tags
   seo: {
-    keywords: ["portfolio", "engineering", "biomedical", "robotics", "[YOUR NAME]"],
+    keywords: ["portfolio", "engineering", "biomedical", "robotics", "forensics", "[YOUR NAME]"],
   },
 
   // Owner Information
@@ -15,7 +15,7 @@ export const siteConfig = {
     name: "[YOUR NAME]",
     email: "[YOUR_EMAIL_ADDRESS]",
     bioHeadline: "[YOUR BIO HEADLINE]",
-    mission: "Engineering to reduce human suffering and expand human capability through accessible, human-centered assistive technology.",
+    mission: "Engineering technology that solves problems people didn't think could be solved, through resourceful, human-centered design.",
   },
 
   // Technical Skills Categories
@@ -26,19 +26,19 @@ export const siteConfig = {
     },
     {
       category: "Programming & Control",
-      items: ["Python", "C/C++", "Arduino", "Raspberry Pi", "MATLAB", "Git"]
+      items: ["Python", "C/C++", "Arduino", "Raspberry Pi", "MATLAB", "ROS2", "Git"]
     },
     {
       category: "Electronics & Fabrication",
       items: ["Circuit Design", "PCB Layout", "3D Printing (FDM/SLA)", "CNC Machining", "Laser Cutting"]
     },
     {
-      category: "Soft Skills",
-      items: ["Technical Writing", "Project Management", "STEAM Education", "Public Speaking"]
+      category: "Analytical & Soft Skills",
+      items: ["Technical Writing", "Forensic Analysis", "STEAM Education", "Public Speaking", "Social Intelligence"]
     }
   ],
 
-  // Core Principles (Moved from Methodology)
+  // Core Principles
   principles: [
     {
       title: "Human-Centered Design",
@@ -52,28 +52,44 @@ export const siteConfig = {
     },
     {
       title: "Open Source Ethos",
-      description: "Believing that shared knowledge accelerates innovation and improves accessibility in medical tech.",
+      description: "Believing that shared knowledge accelerates innovation and improves accessibility in tech.",
       icon: "🔓"
     }
   ],
 
-  // Inspiration & Learning Resources (Enhanced Feature #11)
+  // Inspiration & Learning Resources
   resources: [
     { 
-      title: "Design for the Real World", 
-      author: "Victor Papanek", 
-      type: "Book",
-      description: "A foundational text on social and environmental responsibility in design.",
-      url: "https://www.amazon.com/Design-Real-World-Victor-Papanek/dp/0500285335",
-      image: "/images/projects/prosthetic-hand.jpg" // Placeholder
+      title: "General Systems Theory", 
+      author: "Ludwig von Bertalanffy (Concept)", 
+      type: "Concept",
+      description: "Understanding circular causality, feedback loops, and how patterns maintain themselves.",
+      url: "/blog/systems-theory-loops",
+      image: "/images/projects/robotics-kit.jpg"
     },
     { 
-      title: "The Design of Everyday Things", 
-      author: "Don Norman", 
+      title: "The Ultimate Circular Motion Guide", 
+      author: "Daniel Carrillo Lopez", 
+      type: "Tutorial",
+      description: "A comprehensive guide to centripetal acceleration, period, and flat-circle physics problems.",
+      url: "/blog/the-ultimate-circular-motion-guide",
+      image: "/images/projects/robotics-kit.jpg"
+    },
+    { 
+      title: "Captivate: The Science of Succeeding with People", 
+      author: "Vanessa Van Edwards", 
       type: "Book",
-      description: "Explores the cognitive psychology behind how people interact with objects.",
-      url: "https://jnd.org/the-design-of-everyday-things-revised-and-expanded-edition/",
-      image: "/images/projects/robotics-kit.jpg" // Placeholder
+      description: "A foundational text on social intelligence and building rapport in professional environments.",
+      url: "https://www.scienceofpeople.com/captivate/",
+      image: "/images/projects/robotics-kit.jpg"
+    },
+    { 
+      title: "Locard's Exchange Principle", 
+      author: "Edmond Locard", 
+      type: "Concept",
+      description: "The fundamental law of forensics: 'Every contact leaves a trace.' Essential for technical debugging.",
+      url: "/blog/locards-exchange-principle-debugging",
+      image: "/images/projects/prosthetic-hand.jpg"
     },
     { 
       title: "Hackaday", 
@@ -81,7 +97,31 @@ export const siteConfig = {
       type: "Website",
       description: "A goldmine for hardware engineering inspiration and teardowns.",
       url: "https://hackaday.com/",
-      image: "/images/projects/prosthetic-hand.jpg" // Placeholder
+      image: "/images/projects/prosthetic-hand.jpg"
+    },
+    { 
+      title: "Gemini CLI Documentation", 
+      author: "Google Gemini Team", 
+      type: "Documentation",
+      description: "Official guide for setting up and using the Gemini AI directly from your terminal.",
+      url: "https://github.com/google-gemini/gemini-cli",
+      image: "/images/projects/robotics-kit.jpg"
+    },
+    { 
+      title: "Design for the Real World", 
+      author: "Victor Papanek", 
+      type: "Book",
+      description: "A foundational text on social and environmental responsibility in design.",
+      url: "https://www.amazon.com/Design-Real-World-Victor-Papanek/dp/0500285335",
+      image: "/images/projects/prosthetic-hand.jpg"
+    },
+    { 
+      title: "The Design of Everyday Things", 
+      author: "Don Norman", 
+      type: "Book",
+      description: "Explores the cognitive psychology behind how people interact with objects.",
+      url: "https://jnd.org/the-design-of-everyday-things-revised-and-expanded-edition/",
+      image: "/images/projects/robotics-kit.jpg"
     }
   ],
 
@@ -93,27 +133,25 @@ export const siteConfig = {
 
   // Availability Status
   availability: {
-    status: "Available", // e.g., "Available", "Busy", "Seeking Internships"
+    status: "Available",
     message: "Seeking Summer 2025 Internships",
     showBadge: true,
   },
 
   // Dark Mode Configuration
-  // Set to 'true' to enable dark mode by default, 'false' for light mode
   darkMode: false,
 
   // Featured Projects on Homepage
-  // Add the 'slug' of the projects you want to feature from 'src/data/projects.js'
   featuredProjects: [
-    "prosthetic-hand",
-    "steam-robotics-kit",
-    // "your-next-featured-project-slug" 
+    "synapse-haptic-band",
+    "teddy-bluesworth-forensics",
+    "force-green-robotics",
   ],
 
   // Contact Page Settings
   contact: {
     tagline: "Have a project in mind or want to discuss my work? Reach out below.",
-    emailServiceId: "", // Placeholder for service like Formspree
+    emailServiceId: "",
     discussionTopics: [
       "📄 Request Project Documentation (CAD/BOM)",
       "🤝 Collaboration Opportunities",

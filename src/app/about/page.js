@@ -23,19 +23,19 @@ export default function About() {
           
           <div className="md:w-2/3">
             <h2 className="text-2xl font-bold mb-4 text-foreground dark:text-foreground-dark">{siteConfig.author.bioHeadline}</h2>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              [YOUR PERSONAL BIOGRAPHY - PARAGRAPH 1]
+            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+              What makes me &quot;me&quot; is the blend of my Mexican heritage and my engineering mindset. My family taught me the value of resourcefulness and community—to always find a way to fix things, not just discard them. This has shaped my approach to engineering, where I see every component as valuable and every problem as an opportunity for a creative solution.
             </p>
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              [YOUR PERSONAL BIOGRAPHY - PARAGRAPH 2]
+            <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
+              This foundation was further shaped by my experiences as a first-generation immigrant to both Canada and the United States. This journey has instilled in me a deep sense of resilience, a resourceful spirit, and an unwavering commitment to giving back to the communities that have embraced me.
             </p>
-            <p className="text-gray-700 dark:text-gray-300">
-              [YOUR PERSONAL BIOGRAPHY - PARAGRAPH 3]
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+              I am not just a builder; I am a problem-solver deeply motivated by a desire to help others. Whether it&apos;s helping my grandpa around the house, volunteering in my community, or designing a new piece of technology, I am always looking for ways to use my skills to make a positive impact.
             </p>
           </div>
-        </div>
+          </div>
 
-        {/* Skills Section */}
+          {/* Philosophy Section */}
         <div className="mb-16">
           <h2 className="text-2xl font-bold mb-8 text-foreground dark:text-foreground-dark border-b border-gray-200 dark:border-zinc-800 pb-2">Technical Skills</h2>
           <SkillsGrid />
