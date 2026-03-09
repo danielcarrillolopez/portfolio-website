@@ -1,0 +1,54 @@
+feat: add hero background diagram and fix homepage layout
+
+New files:
+- components/HeroBackground.js — inline SVG component with prosthetic joint diagram; uses currentColor for automatic light/dark theme support
+- public/linkedin_banner.png — custom LinkedIn banner (parchment + logo blue, Lora serif typography, joint diagram)
+
+Modified files:
+- src/app/page.js — refactored hero section layout:
+    - Replaced <img src="/hero-background.svg"> with inline <HeroBackground /> component (fixes broken SVG rendering — currentColor does not work in <img> tags)
+    - Moved SVG background inside the hero <section> instead of a separate empty <div>
+    - Added relative overflow-hidden to hero section to properly contain the absolute-positioned background
+    - Added relative z-10 to hero content div to ensure text renders above the background
+    - Removed TypeScript type annotation (t: string) → (t) to fix Ecmascript parse error in .js file
+
+Website Architecture & Logic Changes
+- Simplified Featured Projects: Removed the redundant featuredProjects list from siteConfig.js. The homepage now relies exclusively on the featured: true flag within src/data/projects.js, making it easier to manage.
+- Standardized Content Tiles: Implemented a unified grid layout across Projects, Blogs, and Resources.
+    - Titles: Fixed to a 3-line limit with a consistent minimum height to prevent layout shifts.
+    - Summaries: Fixed to a 3-line limit with a consistent minimum height.
+    - Font Scaling: Reduced title font size slightly to accommodate your longer, more descriptive document titles.
+
+New Interactive Features
+- Inspirations & Resources Page: Created a new /resources page to host a curated library of engineering books, tools, and websites.
+    - Added multi-select category filtering.
+    - Added alphabetical and type-based sorting.
+    - Added real-time search functionality.
+- Refined "About Me" Flow: Restructured the About page into a more logical narrative:
+    - Engineering Philosophy: Now appears first to establish your principles.
+    - Mission Statement: A centralized, high-impact mission block.
+    - Core Principle Boxes: Visual cards for Human-Centered Design, DFM, and Open Source Ethos.
+- Dedicated Mentors Page: Created a new /mentors page between about and contact.
+
+Component & UI Enhancements
+- Navigation Upgrade:
+    - Implemented a fully responsive Mobile Menu with an animated toggle.
+    - Added Glassmorphism styling (blur effect) to the sticky header.
+    - Improved branding by using your name as the primary logo.
+- Accessibility (A11y) Audit:
+    - Added a Skip-to-Content link for keyboard users.
+    - Integrated ARIA labels across all search and filter components.
+    - Added Aria-live regions so screen readers announce when filter results change.
+- Dark Mode Polish: Refined contrast ratios and background transitions for all new UI elements (Tech Spec tables, Resource cards, and Collab invitations).
+
+Documentation & Data
+- Updated siteConfig.js: Added new objects for mission, principles, and resources to make the site 100% customizable without touching React code.
+- Enhanced Project Data: Added specs and collaboration fields to example projects to showcase technical depth.
+- Audit Report: Appended a final Feature Audit & Status Report to portfolio_features_doc.md for future reference.
+
+Vault Content Population
+- Extracted and transformed content from folders 01-08 including:
+    - 15+ new blog posts across Mindset, Engineering Insights, and Tutorials.
+    - Detailed case studies for the Blind Hockey Puck, Force Green Robotics, and Synapse.
+    - Integration of personal narratives (Grandfather's workshop, Immigration journey) into professional assets.
+    - Documentation of the educational journey and transition from builder to founder.

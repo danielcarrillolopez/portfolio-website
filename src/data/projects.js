@@ -255,6 +255,64 @@ export const projects = [
       "Materials": "PLA & TPU",
       "Sensors": "Accelerometer",
       "Feedback": "Acoustic (Buzzing)"
+      }
+    },
+    {
+      id: 10,
+      slug: 'synapse-haptic-band-v2',
+      title: 'Synapse: Haptic Band (Venture Progression)',
+      description: 'Expanding the haptic band from a technical prototype into a functional venture for the accessibility community.',
+      image: '/images/projects/robotics-kit.jpg',
+      tags: ['Entrepreneurship', 'Haptics', 'Pitching', 'Accessibility'],
+      date: 'February 2026',
+      duration: 'Ongoing',
+      cost: 'N/A',
+      featured: true,
+      problem: `Moving beyond technical feasibility to solve real-world accessibility gaps for 37.5 million deaf and hard-of-hearing Americans.`,
+      approach: `Conducted extensive user validation and competitive analysis to transition the prototype into a market-ready assistive device.`,
+      technicalDetails: [
+      'Generation: 5th generation functional prototype',
+      'Connectivity: Wi-Fi/Bluetooth smartphone sync',
+      'Research: Validated haptic patterns with users',
+      'Strategy: Developed full Business Model Canvas'
+      ],
+      results: `Successfully pitched at Maryville University's Battle of the Saints competition, securing validation from industry judges.`,
+      lessons: ['The story of impact is as important as the hardware specs.', 'Founding a venture requires a multidisciplinary approach beyond engineering.'],
+      futureWork: `Developing clinical partnerships for pilot testing the device.`,
+      specs: {
+      "Iteration": "V5 Prototype",
+      "Wireless": "BLE & Wi-Fi",
+      "Validation": "User Interviews",
+      "Model": "B2C / Accessibility"
+      }
+    },
+    {
+    id: 11,
+    slug: 'synapse-haptic-band',
+    title: 'Synapse: Haptic Band',
+    description: 'A wearable silent alarm and notification system designed for heavy sleepers and the accessibility community.',
+    image: '/images/projects/robotics-kit.jpg',
+    tags: ['Wearables', 'Haptics', 'ESP32', 'Entrepreneurship', 'Accessibility'],
+    date: 'October 2025',
+    duration: 'Ongoing',
+    cost: 'N/A',
+    featured: true,
+    problem: `80% of people struggle to wake up consistently with sound-based alarms, and for the deaf community, auditory alerts are completely inaccessible.`,
+    approach: `Developed 5 generations of prototypes using the ESP32-C3 to translate digital alerts into unmistakable haptic patterns on the wrist.`,
+    technicalDetails: [
+      'Microcontroller: Seeed Studio XIAO ESP32-C3',
+      'Connectivity: Wi-Fi and Bluetooth (BLE)',
+      'Feedback: Calibrated coin vibration motors',
+      'Integration: Syncs with smartphone and smart home safety systems'
+    ],
+    results: `Pitched at Maryville University's Battle of the Saints and validated with user research from the deaf and hard-of-hearing community.`,
+    lessons: ['Technology only matters when it advocates for people.', 'Hardware is only 50% of a startup venture.'],
+    futureWork: `Developing an open-source EMG control module for the next generation of the device.`,
+    specs: {
+      "Controller": "Seeed XIAO ESP32-C3",
+      "Wireless": "Wi-Fi & BLE",
+      "Power": "LiPo Rechargeable",
+      "Interface": "Mobile App Sync"
     }
   }
 ];

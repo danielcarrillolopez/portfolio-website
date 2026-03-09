@@ -32,6 +32,7 @@ Engineering excellence is only 50% of the game. I’ve implemented a "Culture of
 - **The 5th Grade Standard:** Training senior members to explain complex technical concepts in accessible language for both judges and junior teammates.
 
 ## Key Outcomes
+- **World Championship 1st Place Design:** Awarded top honors for mechanical design and engineering excellence at the FIRST Tech Challenge World Championships.
 - **World Championship Qualifier:** Successfully rebuilt our robot "Eileen" under extreme pressure during the competition.
 - **Team REV Sponsorship:** Secured and maintained official sponsorship through consistent technical documentation and brand representation.
 - **Dean's List Semifinalist:** Recognized for individual leadership and impact within the FIRST community.

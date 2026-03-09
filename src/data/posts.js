@@ -218,5 +218,38 @@ export const posts = [
     readTime: '6 min read',
     image: '/images/profile/profile.jpg',
     tags: ['Immigration', 'Identity', 'Engineering Mindset', 'Leadership']
+  },
+  {
+    id: 21,
+    slug: 'educational-journey',
+    title: 'Trailblazing a Path: My Educational Journey',
+    excerpt: 'A reflection on the milestones, self-taught skills, and pivotal experiences that have shaped my path as an engineer.',
+    date: 'March 08, 2026',
+    category: 'Mindset',
+    readTime: '8 min read',
+    image: '/images/profile/profile.jpg',
+    tags: ['Education', 'Reflection', 'Robotics', 'Research']
+  },
+  {
+    id: 22,
+    slug: 'from-sketch-to-stage',
+    title: 'From Sketch to Stage: The Engineering of a Pitch',
+    excerpt: 'Reflecting on the transition from technical expert to startup founder during Maryville University\'s "Battle of the Saints" competition.',
+    date: 'March 08, 2026',
+    category: 'Mindset',
+    readTime: '7 min read',
+    image: '/images/projects/robotics-kit.jpg',
+    tags: ['Entrepreneurship', 'Pitching', 'Innovation', 'Synapse']
+  },
+  {
+    id: 23,
+    slug: 'spotify-mcp-docker',
+    title: 'Spotify MCP: Bridging AI and Music via Docker',
+    excerpt: 'A technical guide to setting up the Spotify MCP server using Docker and PowerShell, featuring cross-platform troubleshooting fixes.',
+    date: 'March 08, 2026',
+    category: 'Tutorials',
+    readTime: '6 min read',
+    image: '/images/projects/robotics-kit.jpg',
+    tags: ['Docker', 'AI', 'Automation', 'PowerShell', 'MCP']
   }
 ];

@@ -146,6 +146,14 @@ export const siteConfig = {
       description: "Personal Knowledge Management strategies using Obsidian and Maps of Content (MOCs).",
       url: "https://www.youtube.com/@linkingyourthinking",
       image: "/images/projects/robotics-kit.jpg"
+    },
+    { 
+      title: "Spotify MCP via Docker", 
+      author: "Daniel Carrillo", 
+      type: "Tutorial",
+      description: "A specialized guide for setting up AI-controlled music interfaces on Windows using Docker.",
+      url: "/blog/spotify-mcp-docker",
+      image: "/images/projects/robotics-kit.jpg"
     }
   ],
 
