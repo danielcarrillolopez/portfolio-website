@@ -159,10 +159,10 @@ export default function BlogShowcase({ initialPosts }) {
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <span className="text-[10px] text-gray-400 font-bold uppercase mb-2">{post.date}</span>
-                <h3 className="text-xl font-bold mb-3 group-hover:text-primary dark:group-hover:text-primary-dark transition text-foreground dark:text-foreground-dark line-clamp-2">
+                <h3 className="text-lg font-bold mb-3 group-hover:text-primary dark:group-hover:text-primary-dark transition text-foreground dark:text-foreground-dark line-clamp-3 min-h-[4.5rem] leading-tight">
                   {post.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm line-clamp-3">
+                <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm line-clamp-3 min-h-[3.75rem]">
                   {post.excerpt}
                 </p>
                 <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-50 dark:border-zinc-800">

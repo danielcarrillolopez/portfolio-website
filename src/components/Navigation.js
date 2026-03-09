@@ -14,6 +14,7 @@ export default function Navigation() {
     { name: 'Blog', href: '/blog' },
     { name: 'Resources', href: '/resources' },
     { name: 'About', href: '/about' },
+    { name: 'Mentors', href: '/mentors' },
     { name: 'Contact', href: '/contact' },
   ];
 

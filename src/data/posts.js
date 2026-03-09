@@ -152,5 +152,71 @@ export const posts = [
     readTime: '6 min read',
     image: '/images/projects/robotics-kit.jpg',
     tags: ['Synapse', 'Research', 'Insomnia']
+  },
+  {
+    id: 15,
+    slug: 'academic-purpose-reflection',
+    title: 'Finding Purpose in Systemic Constraints: A Reflection on High School',
+    excerpt: 'Transforming the "prison of boredom" into a self-directed engineering laboratory. A raw look at finding agency within academic structures.',
+    date: 'March 08, 2026',
+    category: 'Mindset',
+    readTime: '5 min read',
+    image: '/images/profile/profile.jpg',
+    tags: ['Reflection', 'Philosophy', 'Education', 'Agency']
+  },
+  {
+    id: 16,
+    slug: 'the-puck-enclosure-iteration',
+    title: 'The Major in the Majors: Engineering the Blind Hockey Puck',
+    excerpt: 'A deep dive into my SLU internship, the modular shell iteration, and learning to listen to the user before the hardware.',
+    date: 'March 08, 2026',
+    category: 'Engineering Insights',
+    readTime: '8 min read',
+    image: '/images/projects/robotics-kit.jpg',
+    tags: ['Inclusive Design', 'Haptics', 'Mentorship', 'SLU']
+  },
+  {
+    id: 17,
+    slug: 'the-architecture-of-mentorship',
+    title: 'The Architecture of Mentorship: Engineering is a Team Sport',
+    excerpt: 'Reflecting on the pivotal mentors from SLU and Rockwood who shifted my perspective from individual DIY building to collaborative innovation.',
+    date: 'March 08, 2026',
+    category: 'Soft Skills',
+    readTime: '6 min read',
+    image: '/images/profile/profile.jpg',
+    tags: ['Mentorship', 'Leadership', 'Professional Growth', 'SLU']
+  },
+  {
+    id: 18,
+    slug: 'gemini-cli-tutorial',
+    title: 'AI in the Terminal: A Guide to Setting up Gemini CLI',
+    excerpt: 'Transforming your development workflow by integrating Google\'s Gemini AI directly into your terminal environment.',
+    date: 'March 08, 2026',
+    category: 'Tutorials',
+    readTime: '6 min read',
+    image: '/images/projects/robotics-kit.jpg',
+    tags: ['AI', 'CLI', 'Workflow', 'Automation']
+  },
+  {
+    id: 19,
+    slug: 'nothing-is-truly-broken',
+    title: 'Nothing is Ever Truly Broken: Lessons from a Mexican Workshop',
+    excerpt: 'How my grandfather\'s workshop in Mexico taught me the fundamental laws of engineering: resourcefulness, resilience, and the "Conversation with Failure".',
+    date: 'March 08, 2026',
+    category: 'Engineering Insights',
+    readTime: '7 min read',
+    image: '/images/profile/profile.jpg',
+    tags: ['Origin Story', 'Philosophy', 'Materials Science', 'Mexican Heritage']
+  },
+  {
+    id: 20,
+    slug: 'the-weight-of-firsts',
+    title: 'The Weight of Firsts: Immigration and the Prototype Mindset',
+    excerpt: 'Exploring the parallels between navigating life as a first-generation immigrant and the high-stakes pressure of engineering a first-of-its-kind prototype.',
+    date: 'March 08, 2026',
+    category: 'Mindset',
+    readTime: '6 min read',
+    image: '/images/profile/profile.jpg',
+    tags: ['Immigration', 'Identity', 'Engineering Mindset', 'Leadership']
   }
 ];

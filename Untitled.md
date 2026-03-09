@@ -1,4 +1,0 @@
-Are there any more content that can be made from or in inspiration of my notes in this path: E:\7_Obsidian Files\Obsidian Vault\01 - Calendar          I still want to keep the
-   posts we have already made but I want to know if there are more topics, discussions, history, etc that can be derived from the content of my notes. You are allowed to do add in        
-   online research from reputable sources. Remember we want to keep a focus in explaining things in an engineering or pscyological way. Remember to follow the blog prompt when making     
-   content, path is below:  C:\Users\earth\Documents\GitHub\portfolio-website\AI Prompt Template (Blog Entree).md

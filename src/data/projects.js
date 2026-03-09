@@ -40,7 +40,7 @@ export const projects = [
     date: 'December 2024',
     duration: '3 Weeks',
     cost: 'N/A',
-    featured: true,
+    featured: false,
     github: 'https://github.com/yourusername/forensic-files',
     problem: `Applying complex forensic methodologies (fiber analysis, odontometry, friction ridge patterns) to a simulated investigative environment.`,
     approach: `Utilized Locard's Exchange Principle and microspectrophotometry logic to match trace evidence to suspects.`,
@@ -148,7 +148,7 @@ export const projects = [
       "Weight": "1.2kg"
     },
     collaboration: {
-      active: true,
+      active: false,
       role: "Mechanical Ruggedization",
       description: "Seeking feedback on the folding hinge mechanism to ensure it can withstand 1000+ cycles in sandy environments."
     }
@@ -163,7 +163,7 @@ export const projects = [
     date: 'September 2023',
     duration: '6 weeks',
     cost: '$65',
-    featured: true,
+    featured: false,
     github: 'https://github.com/yourusername/steam-kit',
     problem: `Teaching robotics in schools is often expensive and uses "black-box" kits that don't show students how engineering works.`,
     approach: `Created a modular kit using a Raspberry Pi Pico and 3D printed components that can be assembled in under an hour.`,
@@ -227,5 +227,34 @@ export const projects = [
     ],
     results: `Achieved 50mJ/cm² dose in 5 minutes, sufficient for inactivating common pathogens.`,
     lessons: ['UV-C degrades plastics, requiring careful material selection.', 'Visual indicators are necessary for invisible radiation safety.']
+  },
+  {
+    id: 9,
+    slug: 'blind-hockey-puck',
+    title: 'Adaptive Blind Hockey Puck: Inclusive Engineering',
+    description: 'A modular, shock-resistant enclosure for blind hockey pucks, integrating active acoustic feedback for stationary tracking.',
+    image: '/images/projects/robotics-kit.jpg',
+    tags: ['Adaptive Sports', 'Haptics', 'ESP32', '3D Printing', 'CAD'],
+    date: 'Summer 2025',
+    duration: '12 Weeks',
+    cost: 'N/A',
+    featured: true,
+    problem: `Blind hockey pucks are silent when stationary and easily damaged, making location tracking and training expensive and difficult.`,
+    approach: `Developed a modular PLA/TPU shell to protect an ESP32-C3 microcontroller that triggers vibration-based acoustic feedback.`,
+    technicalDetails: [
+      'Microcontroller: Seeed Studio XIAO ESP32-C3',
+      'Material: Hybrid PLA (Rigid) and TPU (Flexible)',
+      'Feedback: Accelerometer-triggered coin vibration motors',
+      'Connectivity: Wi-Fi remote control for coach-led drills'
+    ],
+    results: `Successfully prototyped a 'sacrificial' modular system that reduced maintenance costs to under $2 per impact failure.`,
+    lessons: ['Focus on the majors in the majors.', 'Modular shell structures are superior for high-impact electronic protection.'],
+    futureWork: `Integrating refined sonar patterns and ultra-wideband (UWB) for precise positioning.`,
+    specs: {
+      "Controller": "Seeed XIAO ESP32-C3",
+      "Materials": "PLA & TPU",
+      "Sensors": "Accelerometer",
+      "Feedback": "Acoustic (Buzzing)"
+    }
   }
 ];

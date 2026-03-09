@@ -122,6 +122,30 @@ export const siteConfig = {
       description: "Explores the cognitive psychology behind how people interact with objects.",
       url: "https://jnd.org/the-design-of-everyday-things-revised-and-expanded-edition/",
       image: "/images/projects/robotics-kit.jpg"
+    },
+    { 
+      title: "The Private AI Stack", 
+      author: "Ollama / n8n / NetworkChuck", 
+      type: "Tutorial",
+      description: "A comprehensive guide to hosting local LLMs and automating your workflow with n8n.",
+      url: "https://www.youtube.com/@NetworkChuck",
+      image: "/images/projects/robotics-kit.jpg"
+    },
+    { 
+      title: "The Engineer's Prompt Library", 
+      author: "Daniel Carrillo", 
+      type: "Resource",
+      description: "Curated collection of advanced system prompts for technical research and writing.",
+      url: "/resources#prompts",
+      image: "/images/projects/robotics-kit.jpg"
+    },
+    { 
+      title: "Linking Your Thinking", 
+      author: "Nick Milo", 
+      type: "Platform",
+      description: "Personal Knowledge Management strategies using Obsidian and Maps of Content (MOCs).",
+      url: "https://www.youtube.com/@linkingyourthinking",
+      image: "/images/projects/robotics-kit.jpg"
     }
   ],
 
@@ -140,13 +164,6 @@ export const siteConfig = {
 
   // Dark Mode Configuration
   darkMode: false,
-
-  // Featured Projects on Homepage
-  featuredProjects: [
-    "synapse-haptic-band",
-    "teddy-bluesworth-forensics",
-    "force-green-robotics",
-  ],
 
   // Contact Page Settings
   contact: {

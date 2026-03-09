@@ -13,30 +13,43 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Post Ideas and Follow-ups.md",
+                "file": "PROJECT_GUIDE.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Post Ideas and Follow-ups"
+              "title": "PROJECT_GUIDE"
             }
           },
           {
-            "id": "bbf39ed1cba9f82a",
+            "id": "fe3a7e3b85e0d291",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
+                "file": "AI Prompt Template (Blog Entree).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "AI Prompt Template (Blog Entree)"
+            }
+          },
+          {
+            "id": "e6b775d511ae5666",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Portfolio Website Content Population Prompt.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Portfolio Website Content Population Prompt"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -68,7 +81,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "failure",
+                "query": "featured",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": true,
@@ -89,7 +102,8 @@
               "title": "Bookmarks"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -110,7 +124,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
+                "file": "PROJECT_GUIDE.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -120,7 +134,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Untitled"
+              "title": "Backlinks for PROJECT_GUIDE"
             }
           },
           {
@@ -129,12 +143,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled.md",
+                "file": "PROJECT_GUIDE.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Untitled"
+              "title": "Outgoing links from PROJECT_GUIDE"
             }
           },
           {
@@ -172,13 +186,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.md",
+                "file": "PROJECT_GUIDE.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Untitled"
+              "title": "Outline of PROJECT_GUIDE"
             }
           }
         ]
@@ -199,13 +213,29 @@
       "bases:Create new base": false
     }
   },
-  "active": "bbf39ed1cba9f82a",
+  "active": "c36d9ea18c6556e0",
   "lastOpenFiles": [
+    "src/content/blog/the-weight-of-firsts.md",
+    "src/content/blog/nothing-is-truly-broken.md",
+    "src/content/blog/gemini-cli-tutorial.md",
+    "src/app/mentors/page.js",
+    "src/app/mentors",
+    "src/content/blog/the-architecture-of-mentorship.md",
+    "src/content/blog/beyond-the-box-of-scraps.md",
+    "src/content/blog/the-rookies-notebook.md",
+    "src/content/blog/the-5th-grade-standard.md",
+    "src/content/projects/force-green-robotics.md",
+    "Post Ideas and Follow-ups.md",
+    "src/content/projects/blind-hockey-puck.md",
+    "src/content/projects",
+    "src/content/blog/the-puck-enclosure-iteration.md",
+    "AI Prompt Template (Blog Entree).md",
+    "Portfolio Website Content Population Prompt.md",
+    "src/content/blog/academic-purpose-reflection.md",
+    "Untitled.md",
     "src/content/blog/bed-notes-1am.md",
     "src/content/blog/transactional-soul.md",
     "src/content/blog/systems-theory-loops.md",
-    "Post Ideas and Follow-ups.md",
-    "Untitled.md",
     "src/content/blog/gemini-client.md",
     "node_modules/regexp.prototype.flags/CHANGELOG.md",
     "node_modules/string.prototype.matchall/CHANGELOG.md",

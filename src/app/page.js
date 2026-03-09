@@ -4,9 +4,7 @@ import { siteConfig } from '@/config/siteConfig';
 import { projects } from '@/data/projects';
 
 export default function Home() {
-  const featuredProjects = projects.filter(p => 
-    p.featured === true || siteConfig.featuredProjects.includes(p.slug)
-  );
+  const featuredProjects = projects.filter(p => p.featured === true);
 
   return (
     <main className="min-h-screen bg-background dark:bg-background-dark">
@@ -65,10 +63,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-primary dark:group-hover:text-primary-dark transition text-foreground dark:text-foreground-dark line-clamp-1">
+                <h3 className="text-lg font-bold mb-2 group-hover:text-primary dark:group-hover:text-primary-dark transition text-foreground dark:text-foreground-dark line-clamp-3 min-h-[4.5rem] leading-tight">
                   {project.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm line-clamp-2">
+                <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm line-clamp-3 min-h-[3.75rem]">
                   {project.description}
                 </p>
                 <div className="flex gap-2 flex-wrap">

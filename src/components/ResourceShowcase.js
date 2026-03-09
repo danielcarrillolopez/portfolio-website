@@ -140,11 +140,11 @@ export default function ResourceShowcase({ initialResources }) {
               </div>
               
               <div className="p-6 flex flex-col flex-grow">
-                <h2 className="text-xl font-bold mb-1 text-foreground dark:text-foreground-dark group-hover:text-primary dark:group-hover:text-primary-dark transition-colors">
+                <h2 className="text-lg font-bold mb-1 text-foreground dark:text-foreground-dark group-hover:text-primary dark:group-hover:text-primary-dark transition-colors line-clamp-3 min-h-[4.5rem] leading-tight">
                   {item.title}
                 </h2>
                 <p className="text-xs text-gray-400 font-bold uppercase mb-4">By {item.author}</p>
-                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow">
+                <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6 flex-grow line-clamp-3 min-h-[3.75rem]">
                   {item.description}
                 </p>
                 <div className="pt-4 border-t border-gray-50 dark:border-zinc-800 flex items-center justify-between">
