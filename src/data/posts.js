@@ -7,7 +7,7 @@ export const posts = [
     date: 'December 05, 2025',
     category: 'Productivity',
     readTime: '7 min read',
-    image: '/images/projects/robotics-kit.jpg',
+    image: '/images/image.jpg',
     tags: ['Obsidian', 'PKM', 'Workflow']
   },
   {
@@ -18,7 +18,7 @@ export const posts = [
     date: 'December 01, 2025',
     category: 'Productivity',
     readTime: '5 min read',
-    image: '/images/profile/profile.jpg',
+    image: '/images/image.jpg',
     tags: ['Analog', 'Capture', 'Workflow']
   },
   {
@@ -29,7 +29,7 @@ export const posts = [
     date: 'January 15, 2026',
     category: 'Engineering Insights',
     readTime: '6 min read',
-    image: '/images/profile/profile.jpg',
+    image: '/images/image.jpg',
     tags: ['Mindset', 'Career', 'Mental Health']
   },
   {
@@ -40,7 +40,7 @@ export const posts = [
     date: 'January 20, 2026',
     category: 'Soft Skills',
     readTime: '5 min read',
-    image: '/images/projects/robotics-kit.jpg',
+    image: '/images/image.jpg',
     tags: ['Burnout', 'Balance', 'Longevity']
   },
   {
@@ -51,7 +51,7 @@ export const posts = [
     date: 'October 15, 2025',
     category: 'Bio-Engineering',
     readTime: '8 min read',
-    image: '/images/projects/robotics-kit.jpg',
+    image: '/images/image.jpg',
     tags: ['Sleep Science', 'Haptics', 'User Research']
   },
   {
@@ -62,7 +62,7 @@ export const posts = [
     date: 'December 15, 2025',
     category: 'Engineering Insights',
     readTime: '7 min read',
-    image: '/images/projects/prosthetic-hand.jpg',
+    image: '/images/image.jpg',
     tags: ['Forensics', 'Debugging', 'Logic']
   },
   {
@@ -73,7 +73,7 @@ export const posts = [
     date: 'November 30, 2025',
     category: 'Tutorials',
     readTime: '6 min read',
-    image: '/images/projects/robotics-kit.jpg',
+    image: '/images/image.jpg',
     tags: ['AI', 'Workflow', 'CLI', 'Productivity']
   },
   {
@@ -84,7 +84,7 @@ export const posts = [
     date: 'December 20, 2025',
     category: 'Productivity',
     readTime: '6 min read',
-    image: '/images/projects/robotics-kit.jpg',
+    image: '/images/image.jpg',
     tags: ['History', 'Productivity', 'Obsidian']
   },
   {
@@ -95,7 +95,7 @@ export const posts = [
     date: 'January 10, 2026',
     category: 'Tutorials',
     readTime: '7 min read',
-    image: '/images/projects/robotics-kit.jpg',
+    image: '/images/image.jpg',
     tags: ['AI', 'CLI', 'Tutorial']
   },
   {
@@ -106,7 +106,7 @@ export const posts = [
     date: 'February 01, 2026',
     category: 'Engineering Insights',
     readTime: '5 min read',
-    image: '/images/profile/profile.jpg',
+    image: '/images/image.jpg',
     tags: ['History', 'Analog', 'EDC']
   },
   {
@@ -117,7 +117,7 @@ export const posts = [
     date: 'December 10, 2025',
     category: 'Engineering Insights',
     readTime: '4 min read',
-    image: '/images/profile/profile.jpg',
+    image: '/images/image.jpg',
     tags: ['Philosophy', 'Career Insight', 'Mentorship']
   },
   {
@@ -128,7 +128,7 @@ export const posts = [
     date: 'December 04, 2025',
     category: 'Soft Skills',
     readTime: '8 min read',
-    image: '/images/projects/robotics-kit.jpg',
+    image: '/images/image.jpg',
     tags: ['Systems Theory', 'Psychology', 'Logic']
   },
   {
@@ -139,7 +139,7 @@ export const posts = [
     date: 'December 04, 2025',
     category: 'Soft Skills',
     readTime: '7 min read',
-    image: '/images/profile/profile.jpg',
+    image: '/images/image.jpg',
     tags: ['Relationships', 'Reflection', 'Mindset']
   },
   {
@@ -150,7 +150,7 @@ export const posts = [
     date: 'July 27, 2025',
     category: 'Bio-Engineering',
     readTime: '6 min read',
-    image: '/images/projects/robotics-kit.jpg',
+    image: '/images/image.jpg',
     tags: ['Synapse', 'Research', 'Insomnia']
   },
   {
@@ -161,7 +161,7 @@ export const posts = [
     date: 'March 08, 2026',
     category: 'Mindset',
     readTime: '5 min read',
-    image: '/images/profile/profile.jpg',
+    image: '/images/image.jpg',
     tags: ['Reflection', 'Philosophy', 'Education', 'Agency']
   },
   {
@@ -172,7 +172,7 @@ export const posts = [
     date: 'March 08, 2026',
     category: 'Engineering Insights',
     readTime: '8 min read',
-    image: '/images/projects/robotics-kit.jpg',
+    image: '/images/image.jpg',
     tags: ['Inclusive Design', 'Haptics', 'Mentorship', 'SLU']
   },
   {
@@ -183,7 +183,7 @@ export const posts = [
     date: 'March 08, 2026',
     category: 'Soft Skills',
     readTime: '6 min read',
-    image: '/images/profile/profile.jpg',
+    image: '/images/image.jpg',
     tags: ['Mentorship', 'Leadership', 'Professional Growth', 'SLU']
   },
   {
@@ -194,7 +194,7 @@ export const posts = [
     date: 'March 08, 2026',
     category: 'Tutorials',
     readTime: '6 min read',
-    image: '/images/projects/robotics-kit.jpg',
+    image: '/images/image.jpg',
     tags: ['AI', 'CLI', 'Workflow', 'Automation']
   },
   {
@@ -205,7 +205,7 @@ export const posts = [
     date: 'March 08, 2026',
     category: 'Engineering Insights',
     readTime: '7 min read',
-    image: '/images/profile/profile.jpg',
+    image: '/images/image.jpg',
     tags: ['Origin Story', 'Philosophy', 'Materials Science', 'Mexican Heritage']
   },
   {
@@ -216,7 +216,7 @@ export const posts = [
     date: 'March 08, 2026',
     category: 'Mindset',
     readTime: '6 min read',
-    image: '/images/profile/profile.jpg',
+    image: '/images/image.jpg',
     tags: ['Immigration', 'Identity', 'Engineering Mindset', 'Leadership']
   },
   {
@@ -227,7 +227,7 @@ export const posts = [
     date: 'March 08, 2026',
     category: 'Mindset',
     readTime: '8 min read',
-    image: '/images/profile/profile.jpg',
+    image: '/images/image.jpg',
     tags: ['Education', 'Reflection', 'Robotics', 'Research']
   },
   {
@@ -238,7 +238,7 @@ export const posts = [
     date: 'March 08, 2026',
     category: 'Mindset',
     readTime: '7 min read',
-    image: '/images/projects/robotics-kit.jpg',
+    image: '/images/image.jpg',
     tags: ['Entrepreneurship', 'Pitching', 'Innovation', 'Synapse']
   },
   {
@@ -249,7 +249,7 @@ export const posts = [
     date: 'March 08, 2026',
     category: 'Tutorials',
     readTime: '6 min read',
-    image: '/images/projects/robotics-kit.jpg',
+    image: '/images/image.jpg',
     tags: ['Docker', 'AI', 'Automation', 'PowerShell', 'MCP']
   }
 ];

@@ -65,7 +65,7 @@ export const siteConfig = {
       type: "Concept",
       description: "Understanding circular causality, feedback loops, and how patterns maintain themselves.",
       url: "/blog/systems-theory-loops",
-      image: "/images/projects/robotics-kit.jpg"
+      image: '/images/image.jpg'
     },
     { 
       title: "The Ultimate Circular Motion Guide", 
@@ -73,7 +73,7 @@ export const siteConfig = {
       type: "Tutorial",
       description: "A comprehensive guide to centripetal acceleration, period, and flat-circle physics problems.",
       url: "/blog/the-ultimate-circular-motion-guide",
-      image: "/images/projects/robotics-kit.jpg"
+      image: '/images/image.jpg'
     },
     { 
       title: "Captivate: The Science of Succeeding with People", 
@@ -81,7 +81,7 @@ export const siteConfig = {
       type: "Book",
       description: "A foundational text on social intelligence and building rapport in professional environments.",
       url: "https://www.scienceofpeople.com/captivate/",
-      image: "/images/projects/robotics-kit.jpg"
+      image: '/images/image.jpg'
     },
     { 
       title: "Locard's Exchange Principle", 
@@ -89,7 +89,7 @@ export const siteConfig = {
       type: "Concept",
       description: "The fundamental law of forensics: 'Every contact leaves a trace.' Essential for technical debugging.",
       url: "/blog/locards-exchange-principle-debugging",
-      image: "/images/projects/prosthetic-hand.jpg"
+      image: '/images/image.jpg'
     },
     { 
       title: "Hackaday", 
@@ -97,7 +97,7 @@ export const siteConfig = {
       type: "Website",
       description: "A goldmine for hardware engineering inspiration and teardowns.",
       url: "https://hackaday.com/",
-      image: "/images/projects/prosthetic-hand.jpg"
+      image: '/images/image.jpg'
     },
     { 
       title: "Gemini CLI Documentation", 
@@ -105,7 +105,7 @@ export const siteConfig = {
       type: "Documentation",
       description: "Official guide for setting up and using the Gemini AI directly from your terminal.",
       url: "https://github.com/google-gemini/gemini-cli",
-      image: "/images/projects/robotics-kit.jpg"
+      image: '/images/image.jpg'
     },
     { 
       title: "Design for the Real World", 
@@ -113,7 +113,7 @@ export const siteConfig = {
       type: "Book",
       description: "A foundational text on social and environmental responsibility in design.",
       url: "https://www.amazon.com/Design-Real-World-Victor-Papanek/dp/0500285335",
-      image: "/images/projects/prosthetic-hand.jpg"
+      image: '/images/image.jpg'
     },
     { 
       title: "The Design of Everyday Things", 
@@ -121,7 +121,7 @@ export const siteConfig = {
       type: "Book",
       description: "Explores the cognitive psychology behind how people interact with objects.",
       url: "https://jnd.org/the-design-of-everyday-things-revised-and-expanded-edition/",
-      image: "/images/projects/robotics-kit.jpg"
+      image: '/images/image.jpg'
     },
     { 
       title: "The Private AI Stack", 
@@ -129,7 +129,7 @@ export const siteConfig = {
       type: "Tutorial",
       description: "A comprehensive guide to hosting local LLMs and automating your workflow with n8n.",
       url: "https://www.youtube.com/@NetworkChuck",
-      image: "/images/projects/robotics-kit.jpg"
+      image: '/images/image.jpg'
     },
     { 
       title: "The Engineer's Prompt Library", 
@@ -137,7 +137,7 @@ export const siteConfig = {
       type: "Resource",
       description: "Curated collection of advanced system prompts for technical research and writing.",
       url: "/resources#prompts",
-      image: "/images/projects/robotics-kit.jpg"
+      image: '/images/image.jpg'
     },
     { 
       title: "Linking Your Thinking", 
@@ -145,7 +145,7 @@ export const siteConfig = {
       type: "Platform",
       description: "Personal Knowledge Management strategies using Obsidian and Maps of Content (MOCs).",
       url: "https://www.youtube.com/@linkingyourthinking",
-      image: "/images/projects/robotics-kit.jpg"
+      image: '/images/image.jpg'
     },
     { 
       title: "Spotify MCP via Docker", 
@@ -153,7 +153,7 @@ export const siteConfig = {
       type: "Tutorial",
       description: "A specialized guide for setting up AI-controlled music interfaces on Windows using Docker.",
       url: "/blog/spotify-mcp-docker",
-      image: "/images/projects/robotics-kit.jpg"
+      image: '/images/image.jpg'
     }
   ],
 
