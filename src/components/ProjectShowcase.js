@@ -170,7 +170,7 @@ export default function ProjectShowcase({ initialProjects }) {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-lg font-bold mb-2 group-hover:text-primary dark:group-hover:text-primary-dark transition text-foreground dark:text-foreground-dark line-clamp-3 min-h-[4.5rem] leading-tight">
+                <h3 className="text-lg font-bold mb-2 group-hover:text-primary dark:group-hover:text-primary-dark transition text-foreground dark:text-foreground-dark line-clamp-2 min-h-[3.5rem] leading-tight">
                   {project.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm line-clamp-3 min-h-[3.75rem]">

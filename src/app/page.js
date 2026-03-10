@@ -22,7 +22,7 @@ export default function Home() {
         <div className="relative z-10 container mx-auto max-w-4xl text-center">
           <div className="inline-block mb-6 px-4 py-1.5 bg-primary/10 dark:bg-primary-dark/10 rounded-full border border-primary/20 dark:border-primary-dark/20 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <span className="text-sm font-bold uppercase tracking-widest text-primary dark:text-primary-dark">
-              Biomedical & Robotics Engineer
+              Aspiring Robotic Prosthetics Engineer & Researcher
             </span>
           </div>
 

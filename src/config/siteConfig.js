@@ -2,18 +2,18 @@
 
 export const siteConfig = {
   // General Site Information
-  title: "[YOUR NAME] - [YOUR PROFESSIONAL TITLE]",
-  description: "[YOUR PORTFOLIO DESCRIPTION]",
+  title: "Daniel Carrillo - Engineering Portfolio",
+  description: "Aspiring Robotic Prosthetics Engineer & Researcher",
   
   // SEO Meta Tags
   seo: {
-    keywords: ["portfolio", "engineering", "biomedical", "robotics", "forensics", "[YOUR NAME]"],
+    keywords: ["portfolio", "engineering", "biomedical", "robotics", "prosthetics", "Daniel Carrillo"],
   },
 
   // Owner Information
   author: {
-    name: "[YOUR NAME]",
-    email: "[YOUR_EMAIL_ADDRESS]",
+    name: "Daniel Carrillo",
+    email: "daniel.martin.carrillo.lopez@gmail.com",
     bioHeadline: "[YOUR BIO HEADLINE]",
     mission: "Engineering technology that solves problems people didn't think could be solved, through resourceful, human-centered design.",
   },
@@ -159,8 +159,8 @@ export const siteConfig = {
 
   // Social Media Links
   socials: {
-    github: "https://github.com/[YOUR_GITHUB_USERNAME]",
-    linkedin: "https://linkedin.com/in/[YOUR_LINKEDIN_PROFILE]",
+    github: "https://github.com/danielcarrillolopez",
+    linkedin: "https://www.linkedin.com/in/daniel-carrillo-1a5127349/",
   },
 
   // Availability Status

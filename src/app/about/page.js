@@ -14,7 +14,7 @@ export default function About() {
           <div className="md:w-1/3">
             <div className="relative w-full aspect-square">
               <Image
-                src="/images/profile/profile.jpg"
+                src="/images/profile/daniel_carrillo.jpg"
                 alt={siteConfig.author.name}
                 fill
                 className="object-cover rounded-2xl shadow-xl border-4 border-white dark:border-zinc-800"
@@ -62,23 +62,6 @@ export default function About() {
           <SkillsGrid />
         </div>
 
-        {/* Final CTA */}
-        <div className="text-center pb-12">
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link 
-              href="/contact" 
-              className="px-8 py-3 bg-primary dark:bg-primary-dark text-white rounded-xl font-bold hover:opacity-90 transition shadow-lg shadow-primary/20"
-            >
-              Get in Touch
-            </Link>
-            <Link 
-              href="/blog/educational-journey" 
-              className="px-8 py-3 bg-white dark:bg-zinc-800 text-foreground dark:text-foreground-dark border border-gray-200 dark:border-zinc-700 rounded-xl font-bold hover:bg-gray-50 dark:hover:bg-zinc-700 transition"
-            >
-              View My Journey
-            </Link>
-          </div>
-        </div>
       </div>
     </main>
   );

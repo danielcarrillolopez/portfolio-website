@@ -9,7 +9,7 @@ export const projects = [
     date: 'October 2025',
     duration: 'Ongoing',
     cost: '$30',
-    featured: true,
+    featured: false,
     github: 'https://github.com/yourusername/synapse-haptics',
     problem: `In a world of constant auditory distraction, we miss critical alerts and struggle with jarring wake-up routines.`,
     approach: `Translating digital language into tactile sensation using an ESP32-C3 and precision vibration motors.`,
@@ -267,7 +267,7 @@ export const projects = [
       date: 'February 2026',
       duration: 'Ongoing',
       cost: 'N/A',
-      featured: true,
+      featured: false,
       problem: `Moving beyond technical feasibility to solve real-world accessibility gaps for 37.5 million deaf and hard-of-hearing Americans.`,
       approach: `Conducted extensive user validation and competitive analysis to transition the prototype into a market-ready assistive device.`,
       technicalDetails: [

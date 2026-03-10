@@ -1,10 +1,17 @@
 import Link from 'next/link';
+import HeroBackground from '@/components/HeroBackground';
 
 export default function NotFound() {
   return (
     <main className="min-h-screen bg-background dark:bg-background-dark flex items-center justify-center p-4 transition-colors duration-300">
       <div className="max-w-xl w-full text-center">
         {/* Engineering Themed Visual */}
+
+        {/* Inline SVG background — currentColor inherits text color for theme support */}
+        <div className="text-slate-800 dark:text-stone-200">
+          <HeroBackground />
+        </div>
+
         <div className="relative mb-8 flex justify-center">
           <div className="text-9xl font-black text-gray-100 dark:text-zinc-900 absolute inset-0 flex items-center justify-center select-none -z-10">
             404

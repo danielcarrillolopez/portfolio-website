@@ -26,6 +26,18 @@ export default function ResourceShowcase({ initialResources }) {
     setSelectedTypes([]);
   };
 
+  // Tag Color Mapping Helper
+  const getTagColor = (type) => {
+    const typeLower = type.toLowerCase();
+    if (typeLower.includes('book')) return 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 border-blue-200 dark:border-blue-800';
+    if (typeLower.includes('website') || typeLower.includes('platform')) return 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800';
+    if (typeLower.includes('tool') || typeLower.includes('software')) return 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-300 border-purple-200 dark:border-purple-800';
+    if (typeLower.includes('concept') || typeLower.includes('theory')) return 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 border-amber-200 dark:border-amber-800';
+    if (typeLower.includes('tutorial') || typeLower.includes('guide')) return 'bg-teal-100 text-teal-700 dark:bg-teal-900/30 dark:text-teal-300 border-teal-200 dark:border-teal-800';
+    if (typeLower.includes('documentation')) return 'bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300 border-indigo-200 dark:border-indigo-800';
+    return 'bg-gray-100 text-gray-600 dark:bg-zinc-800 dark:text-gray-400 border-gray-200 dark:border-zinc-700';
+  };
+
   // Filter and Sort Logic
   const filteredResources = useMemo(() => {
     const searchTerms = searchQuery.toLowerCase().split(' ').filter(term => term.length > 0);
@@ -132,15 +144,15 @@ export default function ResourceShowcase({ initialResources }) {
                   fill
                   className="object-cover group-hover:scale-110 transition duration-500 opacity-80 group-hover:opacity-100"
                 />
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-white/90 dark:bg-zinc-900/90 text-[10px] font-bold uppercase rounded-full shadow-sm text-primary dark:text-primary-dark">
+                <div className="absolute top-4 left-4">
+                  <span className={`px-3 py-1 text-[10px] font-bold uppercase rounded-full shadow-sm border ${getTagColor(item.type)}`}>
                     {item.type}
                   </span>
                 </div>
               </div>
               
               <div className="p-6 flex flex-col flex-grow">
-                <h2 className="text-lg font-bold mb-1 text-foreground dark:text-foreground-dark group-hover:text-primary dark:group-hover:text-primary-dark transition-colors line-clamp-3 min-h-[4.5rem] leading-tight">
+                <h2 className="text-lg font-bold mb-1 text-foreground dark:text-foreground-dark group-hover:text-primary dark:group-hover:text-primary-dark transition-colors line-clamp-2 min-h-[3.5rem] leading-tight">
                   {item.title}
                 </h2>
                 <p className="text-xs text-gray-400 font-bold uppercase mb-4">By {item.author}</p>
