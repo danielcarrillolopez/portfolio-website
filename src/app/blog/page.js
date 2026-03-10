@@ -2,6 +2,8 @@ import { posts } from '@/data/posts';
 import BlogShowcase from '@/components/BlogShowcase';
 
 export default function Blog() {
+  const visiblePosts = posts.filter(p => p.visible !== false);
+
   return (
     <main className="min-h-screen bg-background dark:bg-background-dark py-12 transition-colors duration-300">
       <div className="container mx-auto px-4">
@@ -13,7 +15,7 @@ export default function Blog() {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <BlogShowcase initialPosts={posts} />
+          <BlogShowcase initialPosts={visiblePosts} />
         </div>
       </div>
     </main>

@@ -5,7 +5,7 @@ import { projects } from '@/data/projects';
 import HeroBackground from '@/components/HeroBackground';
 
 export default function Home() {
-  const featuredProjects = projects.filter(p => p.featured === true);
+  const featuredProjects = projects.filter(p => p.featured === true && p.visible !== false);
 
   return (
     <main className="min-h-screen bg-background dark:bg-background-dark">

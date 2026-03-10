@@ -16,8 +16,8 @@ export default async function ProjectDetail({ params }) {
   // Find the project by slug
   const project = projects.find(p => p.slug === slug);
   
-  // If project doesn't exist, show 404
-  if (!project) {
+  // If project doesn't exist or is hidden, show 404
+  if (!project || project.visible === false) {
     notFound();
   }
 

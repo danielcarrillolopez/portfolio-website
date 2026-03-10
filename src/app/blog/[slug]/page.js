@@ -12,7 +12,7 @@ export default async function BlogPost({ params }) {
   const { slug } = await params;
   const post = posts.find((p) => p.slug === slug);
 
-  if (!post) {
+  if (!post || post.visible === false) {
     notFound();
   }
 

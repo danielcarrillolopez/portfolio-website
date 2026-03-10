@@ -1,7 +1,10 @@
 import { siteConfig } from '@/config/siteConfig';
+import { resources } from '@/data/resources';
 import ResourceShowcase from '@/components/ResourceShowcase';
 
 export default function Resources() {
+  const visibleResources = resources.filter(r => r.visible !== false);
+
   return (
     <main className="min-h-screen bg-background dark:bg-background-dark py-12 transition-colors duration-300">
       <div className="container mx-auto px-4">
@@ -13,7 +16,7 @@ export default function Resources() {
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <ResourceShowcase initialResources={siteConfig.resources} />
+          <ResourceShowcase initialResources={visibleResources} />
         </div>
       </div>
     </main>

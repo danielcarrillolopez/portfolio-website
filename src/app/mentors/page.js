@@ -1,54 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { siteConfig } from '@/config/siteConfig';
+import { mentors } from '@/data/mentors';
 
 export default function Mentors() {
-  const mentors = [
-    {
-      name: "Dr. Jenna Gorlewicz",
-      title: "Lab Director & Associate Dean of Research",
-      organization: "Saint Louis University (SLU) CHROME Lab",
-      image: "/images/mentors/jenna_gorlewicz.jpg", // Placeholder
-      bio: "Dr. Gorlewicz runs the CHROME Lab with a mission to 'engineer for the benefit of society.' Her guidance shifted my perspective toward human-centered design and interdisciplinary innovation.",
-      impact: "Introduced me to high-level technical leadership and the philosophy of engineering for social good.",
-      links: [
-        { label: "CHROME Lab", url: "https://sites.google.com/slu.edu/gorlewicz-lab/chrome-lab-team/jenna-gorlewicz?authuser=0" }
-      ]
-    },
-    {
-      name: "Jake Little",
-      title: "Graduate Research Assistant",
-      organization: "Saint Louis University (SLU) CHROME Lab",
-      image: "/images/mentors/jake_little.jpg", // Placeholder
-      bio: "My one-on-one mentor during the Adaptive Blind Hockey Puck project. Jake provided technical guidance on haptic integration and helped me bridge the gap between high school robotics and academic research.",
-      impact: "Taught me the importance of rigor in research and that technical failures are essential data points for iteration.",
-      links: [
-        { label: "CHROME Lab", url: "https://sites.google.com/slu.edu/gorlewicz-lab/chrome-lab-team/jake-little?authuser=0" }
-      ]
-    },
-    {
-      name: "Dr. Jen L. Tennison",
-      title: "Lab Manager & Research Engineer",
-      organization: "Saint Louis University (SLU) CHROME Lab",
-      image: "/images/mentors/jen_tennison.png", // Placeholder
-      bio: "Guided the experimental testing phases of the hockey puck project, ensuring that our prototypes met the high standards required for real-world inclusive sports technology.",
-      impact: "Demonstrated how to translate experimental data into practical hardware improvements.",
-      links: [
-        { label: "CHROME Lab", url: "https://sites.google.com/slu.edu/gorlewicz-lab/chrome-lab-team/jen-tennison?authuser=0" }
-      ]
-    },
-    {
-      name: "Dixie Baker",
-      title: "Internship Program Manager",
-      organization: "Rockwood School District (Partners in Education)",
-      image: "/images/mentors/dixie_baker.jpg", // Placeholder
-      bio: "The key facilitator of my professional entry points. Dixie coordinated the PIE program that connected me with SLU and challenged me to define my professional identity as an engineer.",
-      impact: "Gave me the guiding principle: 'Focus on the majors in the majors and the minors in the minors.'",
-      links: [
-        { label: "Rockwood PIE", url: "https://www.rsdmo.org/get-involved/partners-in-education/summer-internships" }
-      ]
-    }
-  ];
+  const visibleMentors = mentors.filter(m => m.visible !== false);
 
   return (
     <main className="min-h-screen bg-background dark:bg-background-dark py-12 transition-colors duration-300">
@@ -56,12 +12,12 @@ export default function Mentors() {
         <div className="mb-12 text-center">
           <h1 className="text-4xl font-bold mb-4 text-foreground dark:text-foreground-dark tracking-tight">Mentors & Network</h1>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto italic">
-            "Engineering is a team sport. True maturity begins when you learn how to be mentored."
+            &quot;Engineering is a team sport. True maturity begins when you learn how to be mentored.&quot;
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {mentors.map((mentor, index) => (
+          {visibleMentors.map((mentor, index) => (
             <div key={index} className="bg-white dark:bg-zinc-900 rounded-2xl p-8 border border-gray-100 dark:border-zinc-800 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-start gap-6 mb-6">
                 <div className="relative w-20 h-20 flex-shrink-0">
@@ -86,7 +42,7 @@ export default function Mentors() {
                 <div className="bg-zinc-50 dark:bg-zinc-800/50 p-4 rounded-xl border border-zinc-100 dark:border-zinc-800">
                   <h3 className="text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-2">Key Impact</h3>
                   <p className="text-sm text-gray-600 dark:text-gray-400 italic">
-                    "{mentor.impact}"
+                    &quot;{mentor.impact}&quot;
                   </p>
                 </div>
                 

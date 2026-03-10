@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "PROJECT_GUIDE.md",
+                "file": "CONTENT_REVIEW_CHECKLIST.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "PROJECT_GUIDE"
+              "title": "CONTENT_REVIEW_CHECKLIST"
             }
           },
           {
@@ -102,13 +102,11 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "e52105717d4cdb76",
@@ -215,6 +213,16 @@
   },
   "active": "c36d9ea18c6556e0",
   "lastOpenFiles": [
+    "public/images/projects/force_green.jpg",
+    "public/images/projects/force_green1.jpg",
+    "public/images/projects/55138648699_e3c5094d7e_o.jpg",
+    "src/data/resources.js",
+    "AI Prompt Template (Blog Entree).md",
+    "CONTENT_REVIEW_CHECKLIST.md",
+    "public/images/projects/55138410789_c9658b87fc_q.jpg",
+    "Portfolio Website Content Population Prompt.md",
+    "portfolio_features_doc.md",
+    "PROJECT_GUIDE.md",
     "src/content/blog/the-weight-of-firsts.md",
     "src/content/blog/nothing-is-truly-broken.md",
     "src/content/blog/gemini-cli-tutorial.md",
@@ -229,8 +237,6 @@
     "src/content/projects/blind-hockey-puck.md",
     "src/content/projects",
     "src/content/blog/the-puck-enclosure-iteration.md",
-    "AI Prompt Template (Blog Entree).md",
-    "Portfolio Website Content Population Prompt.md",
     "src/content/blog/academic-purpose-reflection.md",
     "Untitled.md",
     "src/content/blog/bed-notes-1am.md",
@@ -239,8 +245,6 @@
     "src/content/blog/gemini-client.md",
     "node_modules/regexp.prototype.flags/CHANGELOG.md",
     "node_modules/string.prototype.matchall/CHANGELOG.md",
-    "src/content/blog/to-rest-or-to-invent.md",
-    "src/content/blog/pocket-notebook-history.md",
-    "src/content/blog/second-brain-history.md"
+    "src/content/blog/to-rest-or-to-invent.md"
   ]
 }

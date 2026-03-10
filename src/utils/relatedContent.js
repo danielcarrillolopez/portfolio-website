@@ -1,6 +1,6 @@
 export function getRelatedProjects(currentProject, allProjects, limit = 3) {
   return allProjects
-    .filter(p => p.slug !== currentProject.slug)
+    .filter(p => p.slug !== currentProject.slug && p.visible !== false)
     .map(p => {
       const sharedTags = p.tags.filter(tag => currentProject.tags.includes(tag)).length;
       return { ...p, score: sharedTags };
@@ -11,9 +11,9 @@ export function getRelatedProjects(currentProject, allProjects, limit = 3) {
 
 export function getRelatedPosts(currentPost, allPosts, limit = 2) {
   return allPosts
-    .filter(p => p.slug !== currentPost.slug)
+    .filter(p => p.slug !== currentPost.slug && p.visible !== false)
     .map(p => {
-      const sharedTags = p.tags.filter(tag => currentPost.tags.includes(tag)).length;
+      const sharedTags = (p.tags || []).filter(tag => currentPost.tags?.includes(tag)).length;
       const categoryMatch = p.category === currentPost.category ? 2 : 0;
       return { ...p, score: sharedTags + categoryMatch };
     })
