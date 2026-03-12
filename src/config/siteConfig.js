@@ -14,7 +14,7 @@ export const siteConfig = {
   author: {
     name: "Daniel Carrillo",
     email: "daniel.martin.carrillo.lopez@gmail.com",
-    bioHeadline: "[YOUR BIO HEADLINE]",
+    bioHeadline: "Aspiring Robotic Prosthetics Engineer & Researcher",
     mission: "Engineering technology that solves problems people didn't think could be solved, through resourceful, human-centered design.",
   },
 
@@ -75,8 +75,8 @@ export const siteConfig = {
 
   // Global Animation Settings
   animations: {
-    duration: 0.6, // Global duration in seconds
-    distance: 30,  // Global slide distance in pixels
+    duration: 1.5, // Global duration in seconds
+    distance: 50,  // Global slide distance in pixels
   },
 
   // Contact Page Settings

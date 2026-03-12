@@ -31,7 +31,7 @@ export default function Home() {
 
           <FadeIn delay={0.1}>
             <h1 className="text-5xl md:text-7xl font-bold text-foreground dark:text-foreground-dark mb-8 tracking-tight leading-tight">
-              Building Tomorrow's <br/>
+              Building Tomorrow&apos;s <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary dark:from-primary-dark dark:to-secondary-dark">
                 Assistive Technology
               </span>
@@ -56,7 +56,7 @@ export default function Home() {
                 href="/contact"
                 className="px-8 py-4 bg-white dark:bg-zinc-800 text-foreground dark:text-foreground-dark border border-gray-200 dark:border-zinc-700 rounded-xl font-bold hover:bg-gray-50 dark:hover:bg-zinc-700 transition"
               >
-                Let's Connect
+                Let&apos;s Connect
               </Link>
             </div>
           </FadeIn>

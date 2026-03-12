@@ -15,10 +15,12 @@ export default function ProjectShowcase({ initialProjects }) {
   useEffect(() => {
     const tech = searchParams.get('tech');
     if (tech && !selectedTags.includes(tech)) {
-      setSelectedTags([tech]);
+      requestAnimationFrame(() => {
+        setSelectedTags([tech]);
+      });
       // Optional: scroll to the showcase if needed
     }
-  }, [searchParams]);
+  }, [searchParams, selectedTags]);
 
   // Extract all unique tags
   const allTags = useMemo(() => {

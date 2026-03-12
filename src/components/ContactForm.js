@@ -85,7 +85,7 @@ I intend to use it for: [Your reason here]`
         <div className="text-4xl mb-4">🚀</div>
         <h3 className="text-2xl font-bold text-green-800 dark:text-green-300 mb-2">Message Sent!</h3>
         <p className="text-green-700 dark:text-green-400">
-          Thank you for reaching out. I'll review your request and get back to you soon.
+          Thank you for reaching out. I&apos;ll review your request and get back to you soon.
         </p>
         <button 
           onClick={() => setIsSubmitted(false)}

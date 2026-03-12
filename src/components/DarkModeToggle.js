@@ -8,9 +8,11 @@ export default function DarkModeToggle() {
 
   // Avoid hydration mismatch
   useEffect(() => {
-    setMounted(true);
-    const isDark = document.documentElement.classList.contains('dark');
-    setDarkMode(isDark);
+    requestAnimationFrame(() => {
+      setMounted(true);
+      const isDark = document.documentElement.classList.contains('dark');
+      setDarkMode(isDark);
+    });
   }, []);
 
   useEffect(() => {

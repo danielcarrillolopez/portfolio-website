@@ -122,8 +122,15 @@ export default function ResourceShowcase({ initialResources }) {
         </div>
       </div>
 
-      <div className="sr-only" aria-live="polite" role="status">
-        Showing {filteredResources.length} {filteredResources.length === 1 ? 'resource' : 'resources'}
+      {/* Results Header */}
+      <div className="flex justify-between items-center px-1">
+        <div className="sr-only" aria-live="polite" role="status">
+          Showing {filteredResources.length} {filteredResources.length === 1 ? 'resource' : 'resources'}
+        </div>
+        
+        <p className="text-sm font-medium text-gray-500">
+          Showing {filteredResources.length} {filteredResources.length === 1 ? 'resource' : 'resources'}
+        </p>
       </div>
 
       {/* Resource Grid */}

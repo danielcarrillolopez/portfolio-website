@@ -35,10 +35,10 @@ export default function About() {
                   I am a biomedical and robotics engineering student dedicated to designing the next generation of assistive devices. My work combines CAD design, programming, and mechatronics to create functional prototypes that bridge the gap between concept and reality.
                 </p>
                 <p>
-                  What defines my approach is a blend of Mexican heritage and a rigorous engineering mindset. I learned in my grandfather's workshop that nothing is ever truly broken—it just requires a more creative solution. This philosophy drives my ambition to build robotic prosthetics that restore confidence and possibility.
+                  What defines my approach is a blend of Mexican heritage and a rigorous engineering mindset. I learned in my grandfather&apos;s workshop that nothing is ever truly broken—it just requires a more creative solution. This philosophy drives my ambition to build robotic prosthetics that restore confidence and possibility.
                 </p>
                 <p className="font-medium text-foreground dark:text-foreground-dark">
-                  Through hands-on research at SLU's CHROME Lab and leading Force Green Robotics, I am building the technical expertise and human-centered perspective needed to make advanced technology accessible to everyone.
+                  Through hands-on research at SLU&apos;s CHROME Lab and leading Force Green Robotics, I am building the technical expertise and human-centered perspective needed to make advanced technology accessible to everyone.
                 </p>
               </div>
             </FadeIn>
