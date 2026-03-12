@@ -1,32 +1,46 @@
 # 🚀 Portfolio Website Guide
 
-Welcome to your engineering portfolio! This website is built with **Next.js 15+** and **Tailwind CSS v4**. It's designed to be easily customizable through a few key configuration files.
+Welcome to your engineering portfolio! This website is built with **Next.js 16+** and **Tailwind CSS v4**. It's designed to be easily customizable through key configuration and data files.
 
 ---
 
-## 📂 2. Managing Projects, Blogs, and Resources
-All data-driven content is stored in the `src/data/` or `src/config/` directories.
+## 📂 1. Project Structure
+- `src/app/`: Next.js App Router (Pages & Layouts)
+- `src/components/`: Reusable UI components
+- `src/data/`: Structured JS data for Projects, Posts, Resources, and Mentors
+- `src/content/`: Markdown files for long-form content (Blog & Project details)
+- `src/config/`: Global site configuration (`siteConfig.js`)
+- `public/`: Static assets (Images, Favicons)
+
+---
+
+## ✍️ 2. Managing Content
 
 ### How to add a new Project:
 1.  **Add Image:** Place a photo in `public/images/projects/`.
-2.  **Add Data:** Copy an existing project object in `src/data/projects.js` and update the fields.
-3.  **Features:** You can toggle `gallery`, `youtubeId`, `specs`, and `collaboration` by adding those objects to the data.
+2.  **Add Data:** Open `src/data/projects.js` and add a new object to the `projects` array.
+3.  **Features:** Use fields like `gallery`, `youtubeId`, `specs`, and `collaboration` to enable rich features on the project page.
 
 ### How to add a new Blog Post:
-1.  **Add Data:** Open `src/data/posts.js`.
-2.  **Template:** Copy an existing post object. Ensure you use a unique `slug`.
-3.  **Markdown:** The `content` field supports full Markdown (headers, lists, code blocks).
-4.  **Tags:** The top-left category badge is color-coded automatically based on the `category` string.
+1.  **Add Data:** Open `src/data/posts.js` and add a new object to the `posts` array.
+2.  **Markdown Content:** 
+    - You can write content directly in the `content` field of the JS object.
+    - **Recommended:** Create a `.md` file in `src/content/blog/` with a filename matching the post's `slug` (e.g., `my-post.md`). The website will automatically prefer the markdown file if it exists.
+3.  **Tags:** Category badges are color-coded based on the `category` string.
 
 ### How to add a new Resource:
-1.  **Add Data:** Open `src/config/siteConfig.js` and find the `resources` array.
+1.  **Add Data:** Open `src/data/resources.js`.
 2.  **Fields:** Each resource needs a `title`, `author`, `type` (e.g., Book, Website), `description`, `url`, and `image`.
-3.  **Filtering:** The Resources page will automatically add new `type` values to the filter list.
+3.  **UI:** The Resources page automatically displays a "Showing X resources" counter and filters by `type`.
+
+### How to add a Mentor:
+1.  **Add Image:** Place a photo in `public/images/mentors/`.
+2.  **Add Data:** Open `src/data/mentors.js` and add a new mentor object.
 
 ---
 
 ## 🎨 3. Colors & Styling (Tailwind v4)
-This project uses **Tailwind CSS v4**, which uses CSS variables in **`src/app/globals.css`** for its theme.
+This project uses **Tailwind CSS v4**, which manages themes via CSS variables in **`src/app/globals.css`**.
 
 ### Changing your Color Palette:
 Find the `@theme` block in `src/app/globals.css`. You can change the hex codes for your primary and secondary colors:
@@ -43,35 +57,24 @@ Find the `@theme` block in `src/app/globals.css`. You can change the hex codes f
   --color-foreground-dark: #ededed;
 }
 ```
-*When you change these variables, Tailwind automatically updates every button and text element across the site.*
 
 ---
 
 ## 📄 4. Adding New Pages
-To add a new page (e.g., a "Resume" or "Resources" page):
 1.  Create a new folder in `src/app/` (e.g., `src/app/resume/`).
 2.  Inside that folder, create a `page.js` file.
-3.  Export a default React component from that file.
-4.  Update **`src/components/Navigation.js`** to add a link to your new page.
+3.  Update **`src/components/Navigation.js`** to add a link to your new page.
 
 ---
 
-## 🖼 5. Images & Assets
-- **Profile Picture:** Replace `/public/images/profile/profile.jpg`.
-- **Project Images:** Store in `/public/images/projects/`.
-- **Favicon/Icon:** Replace `/src/app/favicon.ico`.
+## 🌑 5. Dark Mode
+1.  **Logic:** Handled by `src/components/DarkModeToggle.js`.
+2.  **Persistence:** Saves preference to `localStorage`.
+3.  **Styling:** Use the `dark:` prefix in your Tailwind classes.
 
 ---
 
-## 🌑 6. Dark Mode Logic
-The website features a hybrid Dark Mode:
-1.  **Detection:** A small script in `layout.js` checks for a user's saved preference or system setting before the page loads (to prevent flickering).
-2.  **Toggle:** The `src/components/DarkModeToggle.js` handles manual switching.
-3.  **Styling:** Use the `dark:` prefix in your HTML classes (e.g., `text-black dark:text-white`).
-
----
-
-## 🚀 7. Development & Deployment
+## 🚀 6. Development & Deployment
 
 ### Run Locally:
 ```bash
@@ -84,7 +87,4 @@ npm run build
 ```
 
 ### Deployment:
-The easiest way to host this is on **Vercel**:
-1.  Push your code to a GitHub repository.
-2.  Import the repository into Vercel.
-3.  It will automatically detect Next.js and deploy your site!
+Optimized for **Vercel**. Simply connect your GitHub repository, and Vercel will handle the rest!

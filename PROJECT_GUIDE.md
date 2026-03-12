@@ -1,90 +1,124 @@
-# How to Add New Projects
+# Engineering Portfolio: Content Guide
 
-This guide explains how to add new engineering projects to your portfolio.
+This guide explains how to manage your projects, blog posts, resources, and mentors using the structured data and markdown system.
 
-## Step 1: Prepare your Images
-1. Place your project image in `public/images/projects/`.
-2. Recommended size: 1200x800px (3:2 aspect ratio) for best results.
-3. Name it simply, e.g., `my-new-project.jpg`.
+---
 
-## Step 2: Add Data to `src/data/projects.js`
-Open `src/data/projects.js` and copy-paste this template into the `projects` array:
+## 🏗️ 1. Adding a New Project
+
+### Step 1: Prepare Assets
+1.  Place your main cover image in `public/images/projects/`.
+2.  (Optional) Place extra gallery images in the same folder.
+3.  Recommended aspect ratio: **3:2** (e.g., 1200x800px).
+
+### Step 2: Add Data to `src/data/projects.js`
+Copy and paste this template into the `projects` array:
 
 ```javascript
   {
-    id: 5, // Increment this number
-    slug: 'my-new-project',
-    title: 'Project Title',
-    description: 'A short 1-2 sentence preview for the card.',
-    image: '/images/projects/my-new-project.jpg',
-    tags: ['Python', 'CAD'],
+    id: 5, // Next available ID
+    slug: 'my-project-slug',
+    title: 'Project Name',
+    description: 'Short summary for the project card.',
+    image: '/images/projects/cover.jpg',
+    tags: ['Robotics', 'CAD'],
     date: 'Month Year',
     duration: 'X weeks',
     cost: '$XXX',
-    featured: true,
-    github: 'https://github.com/yourusername/repo',
-    youtubeId: 'VIDEO_ID', // Optional: YouTube video ID
+    featured: true, // Show on homepage
+    visible: true,  // Set to false to hide
+    github: 'https://github.com/your-username/repo',
+    youtubeId: 'VIDEO_ID', // Optional YouTube integration
     gallery: [             // Optional: Array of image paths
-      '/images/projects/img1.jpg',
-      '/images/projects/img2.jpg'
+      '/images/projects/img1.jpg'
     ],
     specs: {               // Optional: Key-value pairs for technical specs
       "Power": "12V",
-      "Material": "Carbon Fiber"
+      "Material": "ABS"
     },
     collaboration: {       // Optional: Set to active to show collab invite
       active: true,
-      role: "Firmware Dev",
-      description: "Need help with X..."
+      role: "Role Name",
+      description: "Short pitch for collaboration."
     },
-    problem: `...`,
-    approach: `...`,
-    technicalDetails: [...],
-    results: `...`,
-    lessons: [...],
-    futureWork: `...`,
+    problem: `What was the challenge?`,
+    approach: `How did you solve it?`,
+    technicalDetails: ['Detail 1', 'Detail 2'],
+    results: `What was the outcome?`,
+    lessons: ['Lesson 1', 'Lesson 2'],
+    futureWork: `What's next?`,
   },
 ```
 
-## Step 3: Add a Blog Post (`src/data/posts.js`)
+---
+
+## ✍️ 2. Adding a New Blog Post
+
+### Step 1: Add Metadata to `src/data/posts.js`
 ```javascript
   {
-    id: 3,
-    slug: 'my-post-title',
+    id: 4,
+    slug: 'my-blog-post',
     title: 'Post Title',
-    excerpt: 'Short summary for the blog list page.',
+    excerpt: 'Short summary for the blog list.',
     date: 'Month Day, Year',
-    category: 'Engineering Insights', // Use a unique name for color-coding
+    category: 'Engineering Insights', // Custom label
     readTime: '5 min read',
-    image: '/images/projects/image.jpg',
-    tags: ['Robotics', 'Tutorial'],
-    content: `
-# My Header
-Supporting full **Markdown** syntax here.
-    `
+    image: '/images/projects/header.jpg',
+    tags: ['Robotics', 'Career'],
+    visible: true,
   },
 ```
 
-## Step 4: Add a Resource (`src/config/siteConfig.js`)
+### Step 2: Add Content (Markdown)
+The system automatically checks for a markdown file in `src/content/blog/` that matches the post's **slug**.
+
+1.  Create `src/content/blog/my-blog-post.md`.
+2.  Write your content in full Markdown (supporting headers, lists, and code blocks).
+
+---
+
+## 📚 3. Adding a New Resource
+
+### Step 1: Add Data to `src/data/resources.js`
 ```javascript
-    { 
-      title: "Title", 
-      author: "Author", 
-      type: "Book", // This is used for filtering
-      description: "Description...",
-      url: "https://...",
-      image: "/images/projects/image.jpg"
-    },
+  { 
+    title: "Resource Title", 
+    author: "Author Name", 
+    type: "Book", // E.g., Website, Tool, Course
+    description: "Brief overview...",
+    url: "https://...",
+    image: "/images/projects/image.jpg"
+  },
+```
+*The Resources page automatically updates its "Showing X resources" count and category filters based on your entries.*
+
+---
+
+## 🤝 4. Adding a Mentor
+
+### Step 1: Add Data to `src/data/mentors.js`
+```javascript
+  {
+    id: 5,
+    name: "Mentor Name",
+    title: "Current Title",
+    organization: "Company/Lab",
+    image: "/images/mentors/photo.jpg",
+    bio: "Their background...",
+    impact: "How they helped your journey.",
+    visible: true,
+    links: [
+      { label: "LinkedIn", url: "https://..." }
+    ]
+  },
 ```
 
-## Step 5: (Optional) Manage Featured Projects
-There are two ways to make a project appear on the Homepage:
+---
 
-1. **The Easy Way:** Set `featured: true` in the project object (see Step 2).
-2. **The Manual Way:** Add the `slug` to the `featuredProjects` list in `src/config/siteConfig.js`. Use this if you want to control the exact order of projects on the home page.
-
-## Verification
-1. Run `npm run dev` to see the changes.
-2. Check the **Home** page to see if the card appears.
-3. Check the **/projects** page to see if it's listed.
-4. Click the project to ensure the **Detail** page loads all data correctly.
+## 🔦 Verification Checklist
+1.  Run `npm run dev` to preview.
+2.  Check the **Home** page if `featured: true`.
+3.  Check the **Projects** or **Blog** lists.
+4.  Visit the **Resource** page to confirm the new count and filters work.
+5.  Click through to individual project/blog pages to verify details.
