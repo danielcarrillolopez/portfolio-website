@@ -1,4 +1,5 @@
 import { siteConfig } from '@/config/siteConfig';
+import Link from 'next/link';
 
 export default function SkillsGrid() {
   return (
@@ -14,12 +15,14 @@ export default function SkillsGrid() {
           </h3>
           <div className="flex flex-wrap gap-2">
             {skillGroup.items.map((skill, i) => (
-              <span 
+              <Link
                 key={i}
-                className="px-3 py-1.5 bg-gray-50 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 text-sm font-medium border border-gray-200 dark:border-zinc-700 rounded-lg"
+                href={`/projects?tech=${encodeURIComponent(skill)}`}
+                className="px-3 py-1.5 bg-gray-50 dark:bg-zinc-800 text-gray-700 dark:text-gray-300 text-sm font-medium border border-gray-200 dark:border-zinc-700 rounded-lg hover:border-primary dark:hover:border-primary-dark hover:text-primary dark:hover:text-primary-dark transition-all"
+                title={`View projects using ${skill}`}
               >
                 {skill}
-              </span>
+              </Link>
             ))}
           </div>
         </div>

@@ -8,6 +8,7 @@ import TechSpecs from '@/components/TechSpecs';
 import CollabInvitation from '@/components/CollabInvitation';
 import RelatedContent from '@/components/RelatedContent';
 import { getRelatedProjects } from '@/utils/relatedContent';
+import ReadingProgressBar from '@/components/ReadingProgressBar';
 
 export default async function ProjectDetail({ params }) {
   // Await params in Next.js 15+
@@ -25,6 +26,7 @@ export default async function ProjectDetail({ params }) {
 
   return (
     <main className="min-h-screen bg-background dark:bg-background-dark py-12 transition-colors duration-300">
+      <ReadingProgressBar />
       <div className="container mx-auto px-4 max-w-4xl">
         <Link 
           href="/projects" 

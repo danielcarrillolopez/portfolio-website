@@ -73,10 +73,16 @@ export const siteConfig = {
   // Dark Mode Configuration
   darkMode: false,
 
+  // Global Animation Settings
+  animations: {
+    duration: 0.6, // Global duration in seconds
+    distance: 30,  // Global slide distance in pixels
+  },
+
   // Contact Page Settings
   contact: {
     tagline: "Have a project in mind or want to discuss my work? Reach out below.",
-    emailServiceId: "",
+    formspreeId: "xeerarvn", 
     discussionTopics: [
       "📄 Request Project Documentation (CAD/BOM)",
       "🤝 Collaboration Opportunities",

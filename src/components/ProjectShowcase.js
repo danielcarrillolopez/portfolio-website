@@ -1,13 +1,24 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 
 export default function ProjectShowcase({ initialProjects }) {
+  const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTags, setSelectedTags] = useState([]);
   const [sortBy, setSortBy] = useState('newest');
+
+  // Handle incoming tech filters from SkillsGrid
+  useEffect(() => {
+    const tech = searchParams.get('tech');
+    if (tech && !selectedTags.includes(tech)) {
+      setSelectedTags([tech]);
+      // Optional: scroll to the showcase if needed
+    }
+  }, [searchParams]);
 
   // Extract all unique tags
   const allTags = useMemo(() => {

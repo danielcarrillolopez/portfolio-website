@@ -5,6 +5,7 @@ import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import RelatedContent from '@/components/RelatedContent';
 import { getRelatedPosts } from '@/utils/relatedContent';
+import ReadingProgressBar from '@/components/ReadingProgressBar';
 import fs from 'fs';
 import path from 'path';
 
@@ -31,6 +32,7 @@ export default async function BlogPost({ params }) {
 
   return (
     <main className="min-h-screen bg-background dark:bg-background-dark py-12 transition-colors duration-300">
+      <ReadingProgressBar />
       <article className="container mx-auto px-4 max-w-3xl">
         <Link 
           href="/blog" 
