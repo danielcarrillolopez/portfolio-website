@@ -1,6 +1,7 @@
 import { projects } from '@/data/projects';
 import ProjectShowcase from '@/components/ProjectShowcase';
 import FadeIn from '@/components/FadeIn';
+import { Suspense } from 'react';
 
 export default function Projects() {
   const visibleProjects = projects.filter(p => p.visible !== false);
@@ -20,7 +21,9 @@ export default function Projects() {
 
         <div className="max-w-7xl mx-auto">
           <FadeIn delay={0.2}>
-            <ProjectShowcase initialProjects={visibleProjects} />
+            <Suspense fallback={<div className="h-96 flex items-center justify-center">Loading projects...</div>}>
+              <ProjectShowcase initialProjects={visibleProjects} />
+            </Suspense>
           </FadeIn>
         </div>
       </div>
